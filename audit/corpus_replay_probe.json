@@ -1,0 +1,1196 @@
+{
+ "corpus_total": 47,
+ "probe_rule": "只写字面成立的字段；抽不到留 None；不假设、不外推",
+ "required_field_coverage": {
+  "pccp_authorized": 47,
+  "change_within_pccp_scope": 0,
+  "acceptance_criteria_met": 0,
+  "remains_se_to_predicate": 0,
+  "evidence_sufficiency": 47
+ },
+ "judge_usable": 0,
+ "verdict_distribution": {
+  "hold": 47
+ },
+ "rows": [
+  {
+   "pma": "P920015",
+   "supplement": "S297",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P170006",
+   "supplement": "S040",
+   "applicant": "Medtronic, Inc.",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "sufficient"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=sufficient：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P200046",
+   "supplement": "S045",
+   "applicant": "Medtronic, Inc.",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "sufficient"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=sufficient：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P190016",
+   "supplement": "S007",
+   "applicant": "Tusker Medical, Inc.",
+   "year": "2024",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P990001",
+   "supplement": "S123",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P980016",
+   "supplement": "S918",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P130021",
+   "supplement": "S179",
+   "applicant": "Medtronic, Inc.",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "sufficient"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=sufficient：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P160026",
+   "supplement": "S040",
+   "applicant": "Physio-Control, Inc.",
+   "year": "2024",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P240010",
+   "supplement": "S001",
+   "applicant": "Caris Life Sciences",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P030036",
+   "supplement": "S151",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P250022",
+   "supplement": "S001",
+   "applicant": "ABBOTT MEDICAL",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "sufficient"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=sufficient：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P890003",
+   "supplement": "S475",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P140017",
+   "supplement": "S033",
+   "applicant": "Medtronic, Inc.",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "sufficient"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=sufficient：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P120017",
+   "supplement": "S038",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P140009",
+   "supplement": "S095",
+   "applicant": "ABBOTT MEDICAL",
+   "year": "2024",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P980050",
+   "supplement": "S145",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P820003",
+   "supplement": "S144",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P010031",
+   "supplement": "S884",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P030031",
+   "supplement": "S143",
+   "applicant": "Biosense Webster, Inc.",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P850089",
+   "supplement": "S171",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P080006",
+   "supplement": "S190",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P060039",
+   "supplement": "S118",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P150033",
+   "supplement": "S201",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P960030",
+   "supplement": "S084",
+   "applicant": "ABBOTT MEDICAL",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "sufficient"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=sufficient：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P950024",
+   "supplement": "S114",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P220013",
+   "supplement": "S034",
+   "applicant": "ABBOTT MEDICAL",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P980035",
+   "supplement": "S807",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P220012",
+   "supplement": "S043",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P930022",
+   "supplement": "S020",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P010015",
+   "supplement": "S558",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P960013",
+   "supplement": "S133",
+   "applicant": "ABBOTT MEDICAL",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "sufficient"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=sufficient：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P160007",
+   "supplement": "S058",
+   "applicant": "Medtronic Minimed",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P850051",
+   "supplement": "S085",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P130022",
+   "supplement": "S069",
+   "applicant": "Nevro Corporation",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P900061",
+   "supplement": "S175",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P990064",
+   "supplement": "S096",
+   "applicant": "Medtronic, Inc.",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "sufficient"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=sufficient：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P210011",
+   "supplement": "S002",
+   "applicant": "Tempus AI, Inc.",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P160035",
+   "supplement": "S052",
+   "applicant": "Berlin Heart, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P970031",
+   "supplement": "S078",
+   "applicant": "Medtronic, Inc.",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "sufficient"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=sufficient：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P930039",
+   "supplement": "S270",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P970012",
+   "supplement": "S101",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P090013",
+   "supplement": "S336",
+   "applicant": "Medtronic, Inc.",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P150004",
+   "supplement": "S071",
+   "applicant": "ABBOTT MEDICAL",
+   "year": "2024",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P980043",
+   "supplement": "S086",
+   "applicant": "Medtronic, Inc.",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "sufficient"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=sufficient：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P240006",
+   "supplement": "S016",
+   "applicant": "Biosense Webster, Inc.",
+   "year": "2026",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P010032",
+   "supplement": "S213",
+   "applicant": "ABBOTT MEDICAL",
+   "year": "2024",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  },
+  {
+   "pma": "P830061",
+   "supplement": "S230",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "year": "2025",
+   "verdict": "hold",
+   "tag": "unclassifiable",
+   "unusable": true,
+   "filled": {
+    "pccp_authorized": true,
+    "change_within_pccp_scope": "None",
+    "acceptance_criteria_met": "None",
+    "remains_se_to_predicate": "None",
+    "evidence_sufficiency": "needs_supplement"
+   },
+   "notes": [
+    "pccp_authorized=True: 原文出现 predetermined change control plan / PCCP",
+    "actually_within_scope=True: 原文以 approval for a PCCP 开头",
+    "remains_se_to_predicate 留 None：原文未提",
+    "evidence_sufficiency=needs_supplement：按是否出现 data/study/testing/validation 字样判断（字面，不判是否充分）",
+    "acceptance_criteria_met 留 None：审批说明不写判据是否达成"
+   ]
+  }
+ ],
+ "assumption_scenarios": {
+  "_note": "以下是假设缺失格取值后的判决分布，用于说明判器是否有区分力；**不是真实回放结果**",
+  "by_scenario": {
+   "A_all_satisfied": {
+    "hold": 47
+   },
+   "B_acceptance_not_met": {
+    "reject": 47
+   },
+   "C_breaks_SE": {
+    "reject": 47
+   },
+   "D_scope_claim_only": {
+    "hold": 47
+   }
+  }
+ },
+ "silent_override": {
+  "_note": "只把 acceptance_criteria_met 置 False（v0.2 字段名），criteria_met 仍 True",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "hazard": "适配器用 criteria_met 覆盖同名结论，填 v0.2 字段名的输入被静默忽略、不报错",
+  "control_v3name": {
+   "verdict": "reject",
+   "tag": "acceptance_not_met"
+  }
+ },
+ "gate_ladder": {
+  "_note": "基线=13 格全填（含 source_refs 非空引用）；逐格降级看判决。用于说明'真实回放要填几格'",
+  "rows": [
+   {
+    "slot": "(基线，13 格全满)",
+    "degraded_to": "-",
+    "verdict": "go",
+    "tag": "ok_covered"
+   },
+   {
+    "slot": "pccp_authorized",
+    "degraded_to": "False",
+    "verdict": "reject",
+    "tag": "no_pccp_authorized"
+   },
+   {
+    "slot": "actually_within_scope",
+    "degraded_to": "False",
+    "verdict": "hold",
+    "tag": "outside_scope"
+   },
+   {
+    "slot": "criteria_met",
+    "degraded_to": "False",
+    "verdict": "reject",
+    "tag": "acceptance_not_met"
+   },
+   {
+    "slot": "criteria_measured",
+    "degraded_to": "False",
+    "verdict": "hold",
+    "tag": "unclassifiable"
+   },
+   {
+    "slot": "remains_se_to_predicate",
+    "degraded_to": "False",
+    "verdict": "reject",
+    "tag": "not_se_to_predicate"
+   },
+   {
+    "slot": "affects_intended_use",
+    "degraded_to": "True",
+    "verdict": "reject",
+    "tag": "intended_use_change"
+   },
+   {
+    "slot": "evidence_sufficiency",
+    "degraded_to": "'needs_supplement'",
+    "verdict": "hold",
+    "tag": "evidence_missing"
+   },
+   {
+    "slot": "change_class_described",
+    "degraded_to": "False",
+    "verdict": "hold",
+    "tag": "unclassifiable"
+   },
+   {
+    "slot": "validation_documented",
+    "degraded_to": "False",
+    "verdict": "hold",
+    "tag": "validation_missing"
+   },
+   {
+    "slot": "labeling_version_history",
+    "degraded_to": "False",
+    "verdict": "hold",
+    "tag": "labeling_version_history_missing"
+   },
+   {
+    "slot": "udi_updated",
+    "degraded_to": "False",
+    "verdict": "hold",
+    "tag": "udi_not_regenerated"
+   },
+   {
+    "slot": "change_type",
+    "degraded_to": "'unknown_type'",
+    "verdict": "hold",
+    "tag": "unclassifiable"
+   },
+   {
+    "slot": "source_refs",
+    "degraded_to": "[]",
+    "verdict": "hold",
+    "tag": "evidence_missing"
+   }
+  ]
+ }
+}
