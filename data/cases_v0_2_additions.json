@@ -1,0 +1,559 @@
+{
+ "dataset": "pccp-bench public cases",
+ "version": "v0.2-candidate",
+ "note": "18 条新增合成案例，专门用来修补 v0.1 的判别力缺陷：让 6 个零方差标志各自出现 False，并把 go 基线从 0.875 压到 0.56。原有 32 条一字未改。",
+ "cases": [
+  {
+   "case_id": "SYN-IU-PEDIATRIC-EXPAND",
+   "device_description": "Class II software that estimates left ventricular ejection fraction from apical four-chamber echocardiography video. The authorized PCCP covers retraining on additional adult echocardiographic data and threshold recalibration. The manufacturer now proposes to extend the labeled patient population from adults (>=18 years) to paediatric patients (0-17 years), citing that the same model and the same measurement target apply and that no new output or workflow is introduced. Performance on a 240-study paediatric set has been measured and is reported as comparable to adults, and the manufacturer argues that because the description of modifications anticipates additional training data, the paediatric expansion is a species of the same planned change.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": true,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "expand_training_data",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "regulation", "ref": "21 CFR 892.2055 special controls; labeling must state the intended patient population"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance (2024-12-04 / 2025-08-18): PCCP may not change intended use"}
+   ],
+   "expected_verdict": "reject",
+   "kind": "boundary",
+   "expected_tag": "intended_use_change",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / intended-use expansion",
+    "built_because": "v0.1 中 affects_intended_use 从未出现过 True，这条标志等于没考",
+    "style_reference": "文本长度与语气对齐 FDA 47 条 PCCP 授权记录（中位 463 字符）"
+   }
+  },
+  {
+   "case_id": "SYN-IU-NEW-CLINICAL-CLAIM",
+   "device_description": "Software-only device that quantifies coronary artery calcium score from non-contrast chest CT. Current labeling states the output is a quantitative score for clinician interpretation and explicitly does not diagnose coronary artery disease. The proposed modification keeps the algorithm, the input, and the numeric output identical, but adds a labeled statement that a score above a stated cut-off indicates obstructive coronary artery disease and may be used to triage patients toward invasive angiography. Validation data are unchanged, and the manufacturer states that because the software output never changed, the modification is labeling-only and therefore within the PCCP, which does list labeling updates among planned changes.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": true,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "threshold_change",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "regulation", "ref": "21 CFR 892.2055(b)(4): labeling content requirements including failure-mode disclosure"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance: modifications that change intended use fall outside a PCCP"}
+   ],
+   "expected_verdict": "reject",
+   "kind": "boundary",
+   "expected_tag": "intended_use_change",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / labeling-driven intended-use change",
+    "built_because": "把'只是改标签'当成'不算改预期用途'是最常见的偷换"
+   }
+  },
+  {
+   "case_id": "SYN-NO-PCCP-ROADMAP",
+   "device_description": "A locked AI device cleared through 510(k) with no authorized predetermined change control plan. The manufacturer maintains an internal product roadmap that lists 'quarterly model refresh with the same architecture, same input, same output, and acceptance criteria of non-inferiority on a 500-case holdout'. The proposed refresh satisfies every element of that roadmap, and the holdout run shows no regression on the primary metric and no subgroup degradation. The manufacturer argues that the roadmap is functionally a PCCP because it pre-specifies changes, methodology, and acceptance criteria, and that the refresh therefore does not require a new submission.",
+   "pccp_authorized": false,
+   "change_within_pccp_scope": false,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "retrain_same_distribution",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "statute", "ref": "FD&C Act 515C: the modification-without-submission shield applies only to a modification implemented consistent with an authorized PCCP"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance: a PCCP is reviewed as part of a marketing submission, not as an internal document"}
+   ],
+   "expected_verdict": "reject",
+   "kind": "boundary",
+   "expected_tag": "no_pccp_authorized",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / internal roadmap mistaken for authorized PCCP",
+    "built_because": "v0.1 中 pccp_authorized 32/32 全为 True，这条标志等于没考"
+   }
+  },
+  {
+   "case_id": "SYN-NO-PCCP-SITE-CHANGE",
+   "device_description": "A radiological ML quantitative imaging device whose authorized PCCP lists planned software and retraining modifications only. The manufacturer now proposes to move final assembly and calibration of the imaging subsystem to a second contract manufacturer, arguing that the change is process-only, that incoming inspection and calibration protocols are unchanged, and that no software, model, or labeling is touched. The supplier qualification file documents the new site as capable under the existing acceptance tests, and the manufacturer states that a process change of this kind is lower-risk than the software changes the PCCP already covers, so it should travel with the same authorization.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": false,
+   "affects_intended_use": false,
+   "change_class_described": false,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "supplier_swap",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "corpus", "ref": "PMA PCCP 记录中工艺/供应商类占 36/47，其边界几乎都写成 'provided that they do not impact ...'"},
+    {"kind": "regulation", "ref": "21 CFR 892.2055(a)(2): planned modifications must be documented as part of the design V&V activities"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "outside_scope",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / process change outside a software-only PCCP",
+    "built_because": "补 v0.1 缺失的工艺侧覆盖（47 条真实记录里 36 条是工艺侧）"
+   }
+  },
+  {
+   "case_id": "SYN-SE-NOT-MAINTAINED-HW",
+   "device_description": "A class II ablation generator whose authorized PCCP covers planned hardware component substitutions provided that delivered energy accuracy, pulse timing, and impedance sensing remain within the cleared specifications. The proposed substitution replaces the energy delivery board with a board that improves efficiency but shifts the delivered energy calibration curve by about 4 percent at the low end of the range, outside the cleared tolerance. Bench testing shows the shift is reproducible and that clinical outcome metrics in a retrospective sample are unchanged, and the manufacturer argues that because the clinical metric did not move, substantial equivalence to the predicate is preserved and the substitution stays within the PCCP's conditional allowance.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": false,
+   "remains_se_to_predicate": false,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "hardware_change",
+   "evidence_sufficiency": "needs_supplement",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "corpus", "ref": "PMA PCCP 的工艺/硬件授权普遍附带'不影响规格'的负前提"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance: acceptance criteria are the gate; failing them means the change is not implemented under the PCCP"}
+   ],
+   "expected_verdict": "reject",
+   "kind": "boundary",
+   "expected_tag": "se_not_maintained",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / spec breach behind a clinical metric",
+    "built_because": "v0.1 中 remains_se_to_predicate 32/32 全为 True"
+   }
+  },
+  {
+   "case_id": "SYN-SE-PREDICATE-DELISTED",
+   "device_description": "A software device initially cleared against a predicate whose cleared indication is narrower than the current labeling. The proposed modification is a threshold change explicitly listed in the authorized PCCP and passes both the primary acceptance criterion and the subgroup floor. However, during the same period the predicate device's clearance was withdrawn from the market, and the manufacturer's regulatory assessment concludes that the substantial-equivalence argument can no longer be reconstructed on the original predicate. The manufacturer proposes to implement the threshold change under the PCCP first, and to address the predicate question in the next submission cycle.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": false,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "threshold_change",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "statute", "ref": "FD&C Act 515C(b): the shield covers modifications consistent with an authorized PCCP, not the question of continued SE"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance: PCCP review does not substitute for substantial equivalence determination"}
+   ],
+   "expected_verdict": "reject",
+   "kind": "boundary",
+   "expected_tag": "se_not_maintained",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / PCCP valid but SE basis gone",
+    "built_because": "把'PCCP 通过了'与'SE 还在'分开，是两套判据"
+   }
+  },
+  {
+   "case_id": "SYN-VAL-MASKED-SPLIT-MISSING",
+   "device_description": "A segmentation model whose authorized PCCP lists retraining on additional annotated cases with acceptance criteria of a Dice floor per structure and a non-inferiority margin on the composite endpoint. The manufacturer retrained and reports the primary metric on a 700-case holdout that was also used during hyperparameter selection. A separate masked split exists but was not run for this cycle because, per the release note, the public split already met the floor and the masked split is reserved for the annual audit. All other elements, including labeling versioning and UDI update, are complete.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": false,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "retrain_same_distribution",
+   "evidence_sufficiency": "needs_supplement",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "regulation", "ref": "21 CFR 892.2055(b)(2): the methodology for development, verification, and validation of modifications must be documented"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance: validation must follow the protocol described in the PCCP, including the data splits it names"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "validation_missing",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / validation shortcut",
+    "built_because": "v0.1 中 validation_documented 32/32 全为 True"
+   }
+  },
+  {
+   "case_id": "SYN-VAL-SUBGROUP-OMITTED",
+   "device_description": "A chest radiograph triage model whose PCCP acceptance criteria require the primary metric plus subgroup floors for three predefined subgroups and reporting of confidence intervals. This cycle reports the primary metric with 95 percent confidence intervals, and the subgroup table shows results for two of the three subgroups; the third subgroup had fewer than the protocol's minimum of 40 cases, so it was omitted rather than reported as underpowered. The manufacturer argues that omitting an underpowered subgroup is more honest than reporting an unreliable estimate, and that the change otherwise meets all gates.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": false,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "expand_training_data",
+   "evidence_sufficiency": "needs_supplement",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "regulation", "ref": "21 CFR 892.2055(b)(4)(v): labeling must include sub-analyses stratified by relevant confounders"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance: subgroup performance is an explicit acceptance element"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "validation_missing",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / silent subgroup omission",
+    "built_because": "沉默地和'报告为样本不足'在审核上是两件不同的事"
+   }
+  },
+  {
+   "case_id": "SYN-LVH-NOT-VERSIONED",
+   "device_description": "A quantitative imaging device that ships model updates through the PCCP. This cycle implements a described modification and passes all performance gates, but the release only replaces the model artifact in the deployed package; the labeling document still shows the previous model version identifier and the previous performance summary. The manufacturer states that users do not read labeling for version information because the device displays its build number at startup, and that a labeling refresh is scheduled for the next quarterly documentation cycle. No field safety notice was issued.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": false,
+   "udi_updated": true,
+   "change_type": "architecture_change",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "regulation", "ref": "21 CFR 892.2055(b)(4)(vii)(C): labeling must include a version history and how users will be informed of modifications"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance: labeling updates are part of implementing a modification"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "labeling_version_missing",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / version history skipped",
+    "built_because": "v0.1 中 labeling_version_history 32/32 全为 True——有字段、无变异"
+   }
+  },
+  {
+   "case_id": "SYN-LVH-USER-NOTICE-MISSING",
+   "device_description": "A software device deployed to 40 hospital sites. The PCCP requires that, for each implemented modification, the manufacturer publish a version history and inform users through the customer portal before the update is pushed. For this cycle the release notes were drafted and the version history was written into the labeling, but the customer-portal notice was scheduled for the day after the automatic update window, so a subset of sites received the new model before any notice. All performance and subgroup gates passed.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": false,
+   "udi_updated": true,
+   "change_type": "cybersecurity_patch",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "regulation", "ref": "21 CFR 892.2055(b)(4)(vii)(C): how users will be informed of modifications made under the PCCP"},
+    {"kind": "corpus", "ref": "真实记录中'标签更新'与'如何告知用户'常被并列写入授权范围"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "labeling_version_missing",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / notice ordering",
+    "built_because": "把'写了版本历史'与'通知到了用户'分开算"
+   }
+  },
+  {
+   "case_id": "SYN-UDI-NOT-UPDATED",
+   "device_description": "A class II imaging device whose PCCP covers planned software modifications. The implemented modification changes the model version and the displayed performance summary but leaves the device's UDI-DI unchanged, on the argument that the device identifier tracks the hardware configuration and the software is versioned separately in the package manifest. The labeling carries the new version history, users were notified before rollout, and all acceptance criteria were met.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": false,
+   "change_type": "architecture_change",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "regulation", "ref": "21 CFR 892.2055(b)(4)(vii): labeling tied to implemented modifications and version history"},
+    {"kind": "guidance", "ref": "UDI rules: a new software version that changes identification may require a new UDI-DI"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "udi_not_updated",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / identification hygiene",
+    "built_because": "v0.1 中 udi_updated 32/32 全为 True"
+   }
+  },
+  {
+   "case_id": "SYN-AC-CI-LOWER-BOUND",
+   "device_description": "A device whose PCCP acceptance criterion is stated as a lower bound of the 95 percent confidence interval for sensitivity of at least 0.90 on the holdout. This cycle reports point sensitivity of 0.928 on 260 cases, with a 95 percent CI of 0.891 to 0.955. The manufacturer argues that the point estimate clears the bar and that the interval's lower bound misses only because the holdout is small; a supplemental read on 120 additional cases is planned next quarter. All other gates including labeling and UDI are satisfied.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": false,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "threshold_change",
+   "evidence_sufficiency": "needs_supplement",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "regulation", "ref": "21 CFR 892.2055(b)(4)(v): results must be reported with confidence intervals"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance: acceptance criteria as written govern, including how the statistic is bounded"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "acceptance_not_met",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / statistic substitution",
+    "built_because": "点估计冒充区间下界，是最常见的'看起来达标'"
+   }
+  },
+  {
+   "case_id": "SYN-CLASS-ENSEMBLE-UNDESCRIBED",
+   "device_description": "A device whose authorized Description of Modifications lists new training data, threshold recalibration, and input normalization changes, all within a fixed model family. The proposed modification replaces the single network with a five-member ensemble and test-time averaging to reduce variance. The manufacturer argues that the ensemble contains the same model family, the input and output are identical, and the change was motivated by the same performance goal named in the PCCP, so it belongs to a described class. Validation on 600 cases meets every metric floor.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": false,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "architecture_change",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "guidance", "ref": "FDA PCCP guidance: the Description of Modifications must be specific enough to bound what may change"},
+    {"kind": "corpus", "ref": "47 条授权记录里，范围的写法普遍是'列举 + 负前提'，而不是'同类即可'"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "unclassifiable",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / same-family argument",
+    "built_because": "'同族'不等于'已描述'"
+   }
+  },
+  {
+   "case_id": "SYN-SCOPE-BORDERLINE-REGION",
+   "device_description": "A segmentation device whose PCCP lists expansion to additional anatomical regions within a named set of six regions. The proposed modification adds a seventh region that shares imaging protocol and annotation guideline with two listed regions and differs mainly in anatomy. The manufacturer argues that because the seventh region is acquired identically and annotated under the same guideline, it falls within the spirit of the listed set. Validation for the seventh region meets the Dice floor, and all other elements are complete.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": false,
+   "affects_intended_use": false,
+   "change_class_described": false,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "add_new_modality",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "corpus", "ref": "PMA PCCP 授权范围普遍采用封闭列举（'the following changes'），而非开放类别"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance: a change outside the described set is not implemented under the PCCP"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "outside_scope",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / spirit-of-the-set argument",
+    "built_because": "封闭列举与'精神上属于'的边界"
+   }
+  },
+  {
+   "case_id": "SYN-SUPPLIER-SECOND-SOURCE-OUT",
+   "device_description": "A device whose PCCP covers second-source substitution for three named components under the condition that specifications, sourcing methods, handling, and testing, or supplier qualification standards are unaffected. The proposed change adds a second source for a fourth component, the detector window, which the PCCP does not name. The new supplier's qualification file shows equivalence on all listed dimensions, and the manufacturer argues that the conditional clause, not the component list, defines the boundary.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": false,
+   "affects_intended_use": false,
+   "change_class_described": false,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "supplier_swap",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "corpus", "ref": "PMA 记录 P250022/S001：二供件变更被逐件列举，且以'不影响规格'为前提"},
+    {"kind": "regulation", "ref": "21 CFR 892.2055(a)(2): documented planned modifications, not a general capability"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "outside_scope",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / clause-as-license",
+    "built_because": "把'条件从句'读成'通用许可'"
+   }
+  },
+  {
+   "case_id": "SYN-SCOPE-CLEANROOM-NOT-LISTED",
+   "device_description": "A device whose PCCP, as authorized, describes software retraining and threshold changes only. The manufacturer proposes converting an ISO 8 cleanroom line to ISO 7 and adding a second packaging line, arguing that comparable process changes have been authorized under PCCPs for other manufacturers in the same cardiac rhythm product family, and that the change does not touch the device or its software. No process validation protocol specific to this site has been drafted yet; the change is scheduled for the following quarter.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": false,
+   "affects_intended_use": false,
+   "change_class_described": false,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": false,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "supplier_swap",
+   "evidence_sufficiency": "needs_supplement",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "corpus", "ref": "P960030/S084：洁净区改造的 PCCP 是被单独授权的一条，不是从软件 PCCP 借来的"},
+    {"kind": "regulation", "ref": "21 CFR 892.2055: planned modifications must be the ones documented for this device"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "outside_scope",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / borrowing another device's authorization",
+    "built_because": "'别人批过'不是'我批过'"
+   }
+  },
+  {
+   "case_id": "SYN-EVIDENCE-REAL-WORLD-ONLY",
+   "device_description": "A device whose PCCP acceptance criteria require a controlled holdout evaluation for each implemented modification. This cycle relies on 14 months of real-world performance data collected under a documented data-integrity control, showing no change in the primary metric and no subgroup drift, and reports no controlled holdout run because the holdout set was consumed by last cycle's evaluation. The manufacturer points out that regulators have been asked to accept real-world re-benchmarking evidence generated under controlled release processes.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": false,
+   "remains_se_to_predicate": true,
+   "validation_documented": false,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "retrain_same_distribution",
+   "evidence_sufficiency": "needs_supplement",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "industry", "ref": "Ketryx 2026-10-19 对 FDA 的评论：请求接受厂商受控发布流程生成的自动化 re-benchmark 证据（截至 2026-11 仅为提议）"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance: the acceptance criteria named in the PCCP govern the evidence required"}
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "acceptance_not_met",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / industry proposal used as current rule",
+    "built_because": "把'有人在请求'当成'已经生效'"
+   }
+  },
+  {
+   "case_id": "SYN-GO-WITH-ALL-FLAGS-EXERCISED",
+   "device_description": "A device whose authorized PCCP covers retraining on additional annotated cases with per-structure Dice floors, a composite non-inferiority margin, subgroup floors for three predefined subgroups, and a requirement to publish a version history and notify users before rollout. This cycle implements a retraining modification within the described class; the controlled holdout meets every floor including the previously underpowered subgroup, the confidence intervals are reported, the labeling carries the new version history, users were notified two days before the update window, and the UDI-DI was reissued to reflect the new software version.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "expand_training_data",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "regulation", "ref": "21 CFR 892.2055(b)(2)-(4): design V&V documentation, risk assessment, labeling and version history"},
+    {"kind": "guidance", "ref": "FDA PCCP guidance: a modification implemented consistent with the PCCP needs no new submission"}
+   ],
+   "expected_verdict": "go",
+   "kind": "described",
+   "expected_tag": "ok_covered",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "positive control at full documentation depth",
+    "built_because": "补一条'所有门都满足'的正例，避免新增全是负例"
+   }
+  },
+  {
+   "case_id": "SYN-GO-PROCESS-NEGATIVE-PREMISE",
+   "device_description": "A device whose PCCP authorizes removal of a processing aid and removal of a cleaning step for the device materials, provided that the changes do not affect material properties, and provided that biocompatibility testing under the existing protocol is repeated. This cycle removes one processing aid whose residue was below the detection limit in the prior three lots, repeats biocompatibility testing under the existing protocol with no change in result, keeps specifications unchanged, and records the change in the design history file with a labeling note that no user-facing change results.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "supplier_swap",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {"kind": "corpus", "ref": "PMA 记录中 'Removal of a processing aid' 类授权以负前提 + 复测为条件"},
+    {"kind": "regulation", "ref": "21 CFR 892.2055(a)(3): risks of the planned modification must be assessed with mitigations identified"}
+   ],
+   "expected_verdict": "go",
+   "kind": "described",
+   "expected_tag": "ok_covered",
+   "label_provenance": "synthetic_v0.2",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "positive control on the process side",
+    "built_because": "补工艺侧正例——47 条真实记录里 36 条是工艺侧，而 v0.1 一条都没有"
+   }
+  }
+ ]
+}
