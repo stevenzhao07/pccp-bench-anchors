@@ -84,3 +84,29 @@ python tools/verify_all.py \
 ```
 
 输出是矩阵，最后一行 `ALL_PASS` / `HAS_FAIL`。任一项 FAIL 就不算通过——**不做加权、不取平均**。
+
+## 零依赖验算（verify_zero_dep.py）
+
+上面所有判据此前都依赖 `cryptography`（早期还依赖过 cosign / sigstore SDK）。为了让"外人可独立验算"不隐含"先装一堆东西"，`tools/verify_zero_dep.py` 只用 Python 标准库把六件事自己算完：
+
+| 判据 | 算什么 |
+|---|---|
+| BINDING | 产物字节 sha256 == 条目 body 的摘要值 |
+| LOGID_BINDING | logID == SHA-256(Rekor 公钥 SPKI DER) |
+| INCLUSION | leaf → Merkle path → root == 条目 rootHash（RFC 6962） |
+| CHECKPOINT | Rekor 公钥对 checkpoint 正文 ECDSA/SHA-256 |
+| SET | 日志对四字段规范化 JSON 的签名 |
+| CHAIN | leaf ← Fulcio intermediate ← root（P-384/SHA-384） |
+
+P-256 与 P-384 曲线运算、DER 签名解析、X.509 证书拆解（TBS / SPKI / 签名算法 OID）全为手写，无第三方导入。
+
+```bash
+python tools/verify_zero_dep.py \
+  --bundle bundle.json --artifact artifact.bin --entry entry.json \
+  --rekor-key rekor_publicKey.json \
+  --intermediate certs/fulcio_intermediate.pem --root certs/fulcio_root.pem
+```
+
+本机实跑 A-0001 与 A-0002，均 `ZERO_DEP_ALL_PASS`（六项全 OK）。负向变异：产物翻一字节 → 只有 BINDING 变 FAIL；条目 body 摘要改全 0 → INCLUSION 与 SET 同时 FAIL、CHECKPOINT 仍 OK（checkpoint 签的是树头不是这一条，属正确行为）。
+
+`certs/` 下两张是 Fulcio 的中间与根证书（公开材料，取自官方 TUF 信任根），仅为免去使用者再自己去取。
