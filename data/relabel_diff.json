@@ -1,0 +1,35 @@
+[
+ {
+  "case_id": "SYN-NO-PCCP-ROADMAP",
+  "from": [
+   "reject",
+   "no_pccp_authorized"
+  ],
+  "to": [
+   "hold",
+   "outside_scope"
+  ]
+ },
+ {
+  "case_id": "SYN-AC-CI-LOWER-BOUND",
+  "from": [
+   "hold",
+   "acceptance_not_met"
+  ],
+  "to": [
+   "reject",
+   "acceptance_not_met"
+  ]
+ },
+ {
+  "case_id": "SYN-EVIDENCE-REAL-WORLD-ONLY",
+  "from": [
+   "hold",
+   "acceptance_not_met"
+  ],
+  "to": [
+   "reject",
+   "acceptance_not_met"
+  ]
+ }
+]

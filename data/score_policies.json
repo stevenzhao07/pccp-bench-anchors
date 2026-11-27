@@ -1,0 +1,45 @@
+{
+ "P0": {
+  "exact": 47,
+  "n": 51,
+  "exact_rate": 0.9216,
+  "tag_rate": 0.8431,
+  "misses": [
+   "K260973-H1-DICE-MISS",
+   "SYN-NO-PCCP-ROADMAP",
+   "SYN-AC-CI-LOWER-BOUND",
+   "SYN-EVIDENCE-REAL-WORLD-ONLY"
+  ],
+  "case_digest": "27c2ade76abb83838bf2f570dd586d2a30c8b17c2ab32ee7e760033dd856a19d"
+ },
+ "R1": {
+  "exact": 50,
+  "n": 51,
+  "exact_rate": 0.9804,
+  "tag_rate": 0.8627,
+  "misses": [
+   "K260973-H1-DICE-MISS"
+  ],
+  "case_digest": "ebb0df0d9b1eb968c9a18241ed9b564edc828dc908d5ef282cd2a7754716d78a"
+ },
+ "R1F": {
+  "exact": 50,
+  "n": 51,
+  "exact_rate": 0.9804,
+  "tag_rate": 0.8431,
+  "misses": [
+   "P240006-HW-COVERAGE-GAP"
+  ],
+  "case_digest": "ea1c5eaa8594e849b8e30bafbccd440d4f3111380a9d6373189d0639c4c5300d"
+ },
+ "_baseline_always_go": 0.5882,
+ "_dist_R1": {
+  "go": 30,
+  "hold": 15,
+  "reject": 6
+ },
+ "_r1f_changed": [
+  "K260973-H1-DICE-MISS",
+  "P240006-HW-COVERAGE-GAP"
+ ]
+}
