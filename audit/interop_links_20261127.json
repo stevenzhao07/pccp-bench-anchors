@@ -1,0 +1,189 @@
+{
+ "checked_at_note": "本机现取，12s 超时；UNKNOWN 不等于可用",
+ "counts": {
+  "LIVE": 16,
+  "UNKNOWN": 2
+ },
+ "rows": [
+  {
+   "id": "T01",
+   "name": "SCITT SCRAPI（draft-ietf-scitt-scrapi-11）",
+   "kind": "上游规范",
+   "priority": 1,
+   "channel": "https://datatracker.ietf.org/doc/draft-ietf-scitt-scrapi/11/",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T02",
+   "name": "scitt-api-emulator（scitt-community）",
+   "kind": "互补实现（可测）",
+   "priority": 1,
+   "channel": "https://api.github.com/repos/scitt-community/scitt-api-emulator",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T03",
+   "name": "draft-gruszka-scitt-statement-identification-02（A4 双服务验收测试）",
+   "kind": "上游测试用例",
+   "priority": 1,
+   "channel": "https://www.ietf.org/archive/id/draft-gruszka-scitt-statement-identification-02.html",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T04",
+   "name": "Croissant 1.1（MLCommons）",
+   "kind": "互补元数据标准（可测）",
+   "priority": 1,
+   "channel": "https://docs.mlcommons.org/croissant/",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T05",
+   "name": "Inspect AI / inspect_evals（UK AISI）",
+   "kind": "下游运行框架",
+   "priority": 1,
+   "channel": "https://api.github.com/repos/UKGovernmentBEIS/inspect_evals",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T06",
+   "name": "in-toto Statement v1 / SLSA provenance",
+   "kind": "上游规范",
+   "priority": 2,
+   "channel": "https://api.github.com/repos/in-toto/attestation",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T07",
+   "name": "Tessera（transparency-dev）",
+   "kind": "互补日志引擎",
+   "priority": 2,
+   "channel": "https://api.github.com/repos/transparency-dev/tessera",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T08",
+   "name": "Sigsum",
+   "kind": "互补日志（另一族设计）",
+   "priority": 3,
+   "channel": "https://sigsum.org/",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T09",
+   "name": "OpenTimestamps",
+   "kind": "互补锚定",
+   "priority": 3,
+   "channel": "https://opentimestamps.org/",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T10",
+   "name": "RFC 3161 时间戳（CA 生态）",
+   "kind": "上游标准",
+   "priority": 3,
+   "channel": "https://www.rfc-editor.org/rfc/rfc3161.html",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T11",
+   "name": "W3C PROV-O",
+   "kind": "上游本体",
+   "priority": 2,
+   "channel": "https://www.w3.org/TR/prov-o/",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T12",
+   "name": "RO-Crate",
+   "kind": "互补打包",
+   "priority": 3,
+   "channel": "https://www.researchobject.org/ro-crate/",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T13",
+   "name": "Hugging Face Datasets（Croissant 内嵌）",
+   "kind": "下游分发",
+   "priority": 2,
+   "channel": "https://huggingface.co/docs/hub/datasets-croissant",
+   "state": "UNKNOWN",
+   "http": 0,
+   "note": "URLError"
+  },
+  {
+   "id": "T14",
+   "name": "Zenodo / DataCite DOI",
+   "kind": "下游存档",
+   "priority": 2,
+   "channel": "https://datacite.org/",
+   "state": "UNKNOWN",
+   "http": 0,
+   "note": "RemoteDisconnected"
+  },
+  {
+   "id": "T15",
+   "name": "MedPerf（MLCommons Medical AI）",
+   "kind": "互补评测平台",
+   "priority": 2,
+   "channel": "https://mlcommons.org/working-groups/data/medical/",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T16",
+   "name": "Ketryx（厂商侧合规流程）",
+   "kind": "互补（不同层）",
+   "priority": 2,
+   "channel": "https://www.ketryx.com/",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T17",
+   "name": "C2PA（Content Credentials）",
+   "kind": "互补（内容层）",
+   "priority": 3,
+   "channel": "https://c2pa.org/",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  },
+  {
+   "id": "T18",
+   "name": "FDA PCCP 指南与 eSTAR",
+   "kind": "需求来源（监管）",
+   "priority": 2,
+   "channel": "https://www.federalregister.gov/documents/2024/12/04/2024-28361/marketing-submission-recommendations-for-a-predetermined-change-control-plan-for-artificial",
+   "state": "LIVE",
+   "http": 200,
+   "note": ""
+  }
+ ]
+}

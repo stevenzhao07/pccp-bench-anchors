@@ -1,0 +1,168 @@
+{
+ "generated": "2026-11-27",
+ "principle": "上游=我们消费它的规范/工具；下游=它消费我们的产物；互补=同一问题不同层，可互认而非替代",
+ "targets": [
+  {
+   "id": "T01", "name": "SCITT SCRAPI（draft-ietf-scitt-scrapi-11）", "kind": "上游规范",
+   "what": "SCITT 透明服务的 REST 接口：注册签名陈述、取回执、发现服务公钥。IETF 标准轨，2026-08 更新。",
+   "interface": "HTTP + COSE_Sign1 陈述 + COSE Receipt",
+   "our_action": "把 statement_A0003.cose 按 SCRAPI 形状注册到一个 TS（先 emulator，后任意 RFC9162 服务），拿回执并用零依赖脚本独立验",
+   "they_test": "他们会问：你的 receipt 能否被第三个实现独立验？我们的 verify_zero_dep 就是答案",
+   "channel": "https://datatracker.ietf.org/doc/draft-ietf-scitt-scrapi/11/",
+   "priority": 1
+  },
+  {
+   "id": "T02", "name": "scitt-api-emulator（scitt-community）", "kind": "互补实现（可测）",
+   "what": "SCITT 参考模拟器，有 CCF 树模式；不是生产代码。",
+   "interface": "CLI: create-claim / submit-claim / 取 receipt",
+   "our_action": "本地装起来，把我们的 COSE_Sign1 提交进去，比对 header 要求（content type label 3、CWT claims label 14）",
+   "they_test": "我们的 emulator 兼容性可作为对外证据：同一陈述被两个服务受理",
+   "channel": "https://api.github.com/repos/scitt-community/scitt-api-emulator",
+   "priority": 1
+  },
+  {
+   "id": "T03", "name": "draft-gruszka-scitt-statement-identification-02（A4 双服务验收测试）", "kind": "上游测试用例",
+   "what": "把同一个陈述注册到两个不同 TS（一个 CCF、一个 RFC9162 日志），再各自独立验两种 receipt 形状——这正是 A4 验收测试。",
+   "interface": "测试用例描述 + 两服务",
+   "our_action": "我们手里已有 RFC9162 日志（Rekor），只要再加一个 CCF 或 emulator，就能完整跑通 A4，并把结果写成可复算记录",
+   "they_test": "结论是他们的测试用例被执行了一次，且披露差异（例如 header 要求不一致）",
+   "channel": "https://www.ietf.org/archive/id/draft-gruszka-scitt-statement-identification-02.html",
+   "priority": 1
+  },
+  {
+   "id": "T04", "name": "Croissant 1.1（MLCommons）", "kind": "互补元数据标准（可测）",
+   "what": "机器学习数据集的机器可读元数据格式，1.1 用 W3C PROV-O 做 provenance、DUO/ODRL 做使用政策；HF/Kaggle/OpenML 已内嵌，Google Dataset Search 可发现 70 万+ 数据集。",
+   "interface": "JSON-LD（schema.org 扩展）+ mlcroissant 校验库",
+   "our_action": "给 pccp-bench_v0.3.2 出一份 croissant.json（把 MANIFEST/merkle 根、判器版本、许可写成 PROV-O），用 mlcroissant 校验通过；再挂到 HF dataset",
+   "they_test": "croissant 校验器直接判我们元数据合不合规——这是现成的外部检查",
+   "channel": "https://docs.mlcommons.org/croissant/",
+   "priority": 1
+  },
+  {
+   "id": "T05", "name": "Inspect AI / inspect_evals（UK AISI）", "kind": "下游运行框架",
+   "what": "第三方评测者的标准框架（240+ 贡献者，150+ 基准，setuptools entry point 可扩展）。",
+   "interface": "Python 包 + entry points（Model Provider / Sandbox / Tool / Approver / Hook）",
+   "our_action": "把 PCCP 判定包成一个 Inspect task（solver=判器，scorer=14 格比对），别人 pip install 后一条命令就能跑我们的题",
+   "they_test": "任何人跑出来就是 T1；我们只需要一个 task 文件，不必求人",
+   "channel": "https://api.github.com/repos/UKGovernmentBEIS/inspect_evals",
+   "priority": 1
+  },
+  {
+   "id": "T06", "name": "in-toto Statement v1 / SLSA provenance", "kind": "上游规范",
+   "what": "软件供应链的可验陈述格式，_type=statement、predicateType 可自定义；已有 SCITT profile 用它承载判定（P10）。",
+   "interface": "JSON 陈述 + DSSE 签名",
+   "our_action": "把我们的回执定义为 in-toto predicate（predicateType=urn:pccp-bench:verdict:v1），让 SLSA/in-toto 生态的工具直接读",
+   "they_test": "他们能验我们的 predicate 绑定，我们能验他们的 provenance —— 双向",
+   "channel": "https://api.github.com/repos/in-toto/attestation",
+   "priority": 2
+  },
+  {
+   "id": "T07", "name": "Tessera（transparency-dev）", "kind": "互补日志引擎",
+   "what": "RFC9162 兼容的透明日志引擎，SCITT 草案里被当 TS 后端用过。",
+   "interface": "HTTP log API + checkpoint 签名",
+   "our_action": "用零依赖验算器验一条 Tessera 日志的 incl proof + checkpoint，证明我们不只会验 Rekor",
+   "they_test": "多日志兼容是我们最缺的证据；验通 Tessera 就把'只验一家'变成'验任意 RFC9162'",
+   "channel": "https://api.github.com/repos/transparency-dev/tessera",
+   "priority": 2
+  },
+  {
+   "id": "T08", "name": "Sigsum", "kind": "互补日志（另一族设计）",
+   "what": "极简透明日志，签名与见证（witness）模型与 Rekor 不同。",
+   "interface": "sigsum 日志 API + 见证 cosignature",
+   "our_action": "读它的 witness cosignature 格式，评估能否纳入我们的零依赖验算（第二类日志）",
+   "they_test": "跨日志族的兼容性证据",
+   "channel": "https://sigsum.org/",
+   "priority": 3
+  },
+  {
+   "id": "T09", "name": "OpenTimestamps", "kind": "互补锚定",
+   "what": "把哈希锚进比特币，时间证明不依赖任何组织。",
+   "interface": ".ots 证明文件 + 升级到区块",
+   "our_action": "把 merkle 根做一次 OTS 锚，作为'不依赖 Sigstore 的第二条时间线'",
+   "they_test": "两套锚互不依赖，任何一方失效仍有另一方",
+   "channel": "https://opentimestamps.org/",
+   "priority": 3
+  },
+  {
+   "id": "T10", "name": "RFC 3161 时间戳（CA 生态）", "kind": "上游标准",
+   "what": "权威时间戳令牌，监管/审计场景最常见的时间证据。",
+   "interface": "TSQ/TSR (DER)",
+   "our_action": "给 v0.3.2 的 merkle 根取一枚公网 TSA 时间戳，纳入 verify_all 第九行",
+   "they_test": "老派审计员只认 3161；这条能让他们不必学 Rekor",
+   "channel": "https://www.rfc-editor.org/rfc/rfc3161.html",
+   "priority": 3
+  },
+  {
+   "id": "T11", "name": "W3C PROV-O", "kind": "上游本体",
+   "what": "来源与责任的本体，Croissant 1.1 已采用。",
+   "interface": "RDF/JSON-LD 三元组",
+   "our_action": "判定回执里的'谁、用什么、基于什么'映射成 PROV 术语，使回执可被任何 PROV 工具消费",
+   "they_test": "元数据可被通用工具读，而不是只有我们的脚本能读",
+   "channel": "https://www.w3.org/TR/prov-o/",
+   "priority": 2
+  },
+  {
+   "id": "T12", "name": "RO-Crate", "kind": "互补打包",
+   "what": "把研究产物+元数据打成可引用包（含 PROV 描述）。",
+   "interface": "ro-crate-metadata.json",
+   "our_action": "给 T1 复核包加一份 RO-Crate 元数据，使包本身可被机构库收录",
+   "they_test": "包符合 RO-Crate 校验器",
+   "channel": "https://www.researchobject.org/ro-crate/",
+   "priority": 3
+  },
+  {
+   "id": "T13", "name": "Hugging Face Datasets（Croissant 内嵌）", "kind": "下游分发",
+   "what": "HF 数据集页内嵌 Croissant JSON-LD，可被 Google Dataset Search 索引。",
+   "interface": "dataset repo + croissant 下载端点",
+   "our_action": "把题集+判器发成 HF dataset（带 croissant 元数据），任何人不装我们的东西就能取",
+   "they_test": "HF 的 viewer/校验会显示元数据完整性",
+   "channel": "https://huggingface.co/docs/hub/datasets-croissant",
+   "priority": 2
+  },
+  {
+   "id": "T14", "name": "Zenodo / DataCite DOI", "kind": "下游存档",
+   "what": "给数据集发 DOI，学术引用与长期存档的标准入口。",
+   "interface": "REST API + DOI 元数据",
+   "our_action": "v0.3.2 定版后发 DOI，把 merkle 根与锚 id 写进元数据",
+   "they_test": "DOI 元数据可被 DataCite 校验",
+   "channel": "https://datacite.org/",
+   "priority": 2
+  },
+  {
+   "id": "T15", "name": "MedPerf（MLCommons Medical AI）", "kind": "互补评测平台",
+   "what": "联邦评测编排：模型到数据方、只回传指标；2026-07 与 Google Cloud 机密计算打通。",
+   "interface": "benchmark / model / 数据方三方编排 + 结果人工批准",
+   "our_action": "我们做'变更范围判定'，它做'性能评测'——可以出一个'基准版本回执'给它做版本追溯",
+   "they_test": "他们关心基准与数据版本的可追溯；我们的回执正好补这块",
+   "channel": "https://mlcommons.org/working-groups/data/medical/",
+   "priority": 2
+  },
+  {
+   "id": "T16", "name": "Ketryx（厂商侧合规流程）", "kind": "互补（不同层）",
+   "what": "面向器械厂商的需求-风险-追溯管理，公开请求 FDA 接受其受控发布流程。",
+   "interface": "厂商侧文档与追溯矩阵",
+   "our_action": "不竞争：他们产出变更记录，我们判定'这次变更是否落在 PCCP 范围'并出可验回执",
+   "they_test": "他们能给我们的是一条真实变更记录（正好是我们缺的真实回放）",
+   "channel": "https://www.ketryx.com/",
+   "priority": 2
+  },
+  {
+   "id": "T17", "name": "C2PA（Content Credentials）", "kind": "互补（内容层）",
+   "what": "内容来源与编辑历史的可验清单，已有成熟 conformance 计划。",
+   "interface": "C2PA manifest + 签名",
+   "our_action": "不作为主战场；只在'回执如何挂到产物'这一层借鉴其 manifest 组织方式",
+   "they_test": "他们的 conformance 流程可作为我们将来做一致性程序的模板",
+   "channel": "https://c2pa.org/",
+   "priority": 3
+  },
+  {
+   "id": "T18", "name": "FDA PCCP 指南与 eSTAR", "kind": "需求来源（监管）",
+   "what": "PCCP 的法定语义来源；eSTAR 是提交模板。",
+   "interface": "指南文本 + 提交模板",
+   "our_action": "把 14 格编码表逐格对回指南条款，形成'条款→字段'对照，作为判据合法性的锚",
+   "they_test": "监管顾问会问'你这 14 格依据哪一条'；对照表就是答案",
+   "channel": "https://www.federalregister.gov/documents/2024/12/04/2024-28361/marketing-submission-recommendations-for-a-predetermined-change-control-plan-for-artificial",
+   "priority": 2
+  }
+ ]
+}
