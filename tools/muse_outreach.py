@@ -24,7 +24,7 @@ import re
 import sys
 import urllib.request
 
-KEY_PATH = r"D:\标准\新建文本文档.txt"
+KEY_PATH = r"<ai-key-file>"
 API_URL = "https://api.siliconflow.cn/v1/chat/completions"
 MODEL = "deepseek-ai/DeepSeek-V3"
 

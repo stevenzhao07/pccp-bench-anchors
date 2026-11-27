@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-11-27T19:22:01+08:00",
-  "repo": "C:\\Users\\SZYL\\Doubao\\chats\\2026-11-26\\new-chat-75\\bench_receipt\\anchors_repo",
-  "simulated_clone": "C:\\Users\\SZYL\\AppData\\Local\\Temp\\outside_4iijo33o\\repo",
+  "repo": "<user-home>\\Doubao\\chats\\2026-11-26\\new-chat-75\\bench_receipt\\anchors_repo",
+  "simulated_clone": "<user-home>\\AppData\\Local\\Temp\\outside_4iijo33o\\repo",
   "scope": "只用仓内文件，不读开发机 out/ dist/",
   "label": "同操作者换目录干跑（T4），不是第三方实测（T1）",
   "verdict": "OUTSIDE_OK",

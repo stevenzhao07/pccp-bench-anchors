@@ -14,7 +14,7 @@ import time
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_KEY_FILE = r"D:\标准\新建文本文档.txt"
+DEFAULT_KEY_FILE = r"<ai-key-file>"
 ENDPOINT = "https://api.siliconflow.cn/v1/chat/completions"
 MODEL = "deepseek-ai/DeepSeek-V3"
 

@@ -6,7 +6,7 @@
 
 | 阻塞 | 现状 | 处置 |
 |---|---|---|
-| adapter 把引擎根写死成 `D:\Workbuddy\...\lgd-engine` | 除作者外没人有这个路径 | `adapter_reference.py` 改为按**自身目录**定位引擎 |
+| adapter 把引擎根写死成 `<local-drive>\...\lgd-engine` | 除作者外没人有这个路径 | `adapter_reference.py` 改为按**自身目录**定位引擎 |
 | 判器 `judge_pccp.py` 依赖 `base.py` 里的 `is_unusable / misused`，而发布快照与本地引擎树**不同源**（本地 base 里根本没有这两个函数） | 导入即 `ImportError`，跑不起来 | 按唯一调用点重建这两个函数，**明确标注为重建、非原字节** |
 
 ## 组成
