@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-27T19:15:11+08:00",
+  "generated_at": "2026-11-27T19:22:01+08:00",
   "repo": "C:\\Users\\SZYL\\Doubao\\chats\\2026-11-26\\new-chat-75\\bench_receipt\\anchors_repo",
-  "simulated_clone": "C:\\Users\\SZYL\\AppData\\Local\\Temp\\outside_5yodj_5d\\repo",
+  "simulated_clone": "C:\\Users\\SZYL\\AppData\\Local\\Temp\\outside_4iijo33o\\repo",
   "scope": "只用仓内文件，不读开发机 out/ dist/",
   "label": "同操作者换目录干跑（T4），不是第三方实测（T1）",
   "verdict": "OUTSIDE_OK",
@@ -79,7 +79,7 @@
       "id": "PORTABLE",
       "claim": "仓内工具换机器也能跑：不写死本机路径、不逃出仓外",
       "status": "PASS",
-      "detail": "扫 18 个脚本，零命中"
+      "detail": "扫 20 个脚本零命中，豁免 2 个自扫描器（mutate_check.py, outside_check.py）"
     }
   ]
 }

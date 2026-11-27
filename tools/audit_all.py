@@ -256,6 +256,15 @@ def check_outside():
         "PASS" if ok2 else "FAIL", tail(txt2, 2))
 
 
+# ---------------- 9.6 定向破坏：每一项判据都要能被改坏触发 ----------------
+def check_mutations():
+    rc, txt = run(["mutate_check.py"], timeout=900)
+    ok = rc == 0 and "MUTATION_SUITE_ALL_DETECTED" in txt
+    add("MUTATION", "sensitivity",
+        "十处定向破坏（哈希/包含/SET/checkpoint/条目/六项/签名/包/公钥/路径）各自都能让指定判据失败",
+        "PASS" if ok else "FAIL", tail(txt, 2))
+
+
 # ---------------- 9. 口径机审 ----------------
 def check_claims():
     if not os.path.isdir(ANCHORS):
@@ -368,6 +377,7 @@ def main():
     check_kappa()
     check_blind_kit()
     check_outside()
+    check_mutations()
     check_claims()
     if a.with_network:
         check_network()

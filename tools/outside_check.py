@@ -63,13 +63,22 @@ def tail(t, n=3):
 
 
 def scan_portable(dst):
-    """扫 tools/*.py 里那些"换台机器就跑不了"的痕迹。"""
+    """扫 tools/*.py 里那些"换台机器就跑不了"的痕迹。
+
+    允许清单：扫描器自身（outside_check.py / mutate_check.py）必然含有被检测的样式字面量，
+    不豁免就会出现"它扫自己"的自指假阳性。豁免是明写在输出里的，不隐藏。
+    """
+    allow = {"outside_check.py", "mutate_check.py"}
     bad = []
+    skipped = []
     tools = os.path.join(dst, "tools")
     if not os.path.isdir(tools):
-        return ["tools/ 目录缺失"]
+        return ["tools/ 目录缺失"], skipped
     for name in sorted(os.listdir(tools)):
         if not name.endswith(".py"):
+            continue
+        if name in allow:
+            skipped.append(name)
             continue
         txt = open(os.path.join(tools, name), encoding="utf-8", errors="replace").read()
         for pat, label in [(r"[A-Za-z]:\\", "写死盘符路径"),
@@ -78,7 +87,7 @@ def scan_portable(dst):
             hits = re.findall(pat, txt)
             if hits:
                 bad.append(f"{name}:{label}({len(hits)})")
-    return bad
+    return bad, skipped
 
 
 def selftest(src):
@@ -86,15 +95,17 @@ def selftest(src):
     tmp = tempfile.mkdtemp(prefix="outside_st_")
     dst = os.path.join(tmp, "repo")
     shutil.copytree(src, dst, ignore=shutil.ignore_patterns(".git", "__pycache__"))
-    clean = scan_portable(dst)
+    clean, _skip0 = scan_portable(dst)
     planted = os.path.join(dst, "tools", "_planted_violation.py")
     with open(planted, "w", encoding="utf-8") as f:
         f.write('p = r"C:\\Users\\someone\\out\\cases.json"\nq = "../../bench_receipt/dist"\n')
-    bad = scan_portable(dst)
+    bad, _skip1 = scan_portable(dst)
     ok = (not clean) and bool(bad)
     print("PORTABLE_SELFTEST")
     print("  干净仓扫描      %s" % ("零命中" if not clean else "已有命中:" + "; ".join(clean)))
     print("  种入违规后扫描  %s" % (" ".join(bad) if bad else "零命中（漏检！）"))
+    if _skip1:
+        print("  豁免（明写）    %s（扫描器自身必然含检测字面量）" % ", ".join(_skip1))
     print("\nPORTABLE_SELFTEST_" + ("OK" if ok else "HAS_FAIL"))
     shutil.rmtree(tmp, ignore_errors=True)
     return 0 if ok else 1
@@ -104,6 +115,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo", default=os.path.join(HERE, "anchors_repo"))
     ap.add_argument("--selftest", action="store_true", help="只跑可移植性扫描的负向对照")
+    ap.add_argument("--out", default=None, help="结果 JSON 落到指定路径（默认 out/OUTSIDE_CHECK.json）")
     a = ap.parse_args()
     src = os.path.abspath(a.repo)
     if not os.path.isdir(src):
@@ -192,9 +204,13 @@ def main() -> int:
         add("PKG-V032", "包自跑", "ERROR", repr(ex))
 
     # ---- 6. 可移植性：写死本机路径 / 逃出仓外的相对路径 ----
-    bad = scan_portable(dst)
+    bad, skipped = scan_portable(dst)
+    note = "; ".join(bad) if bad else (
+        "扫 %d 个脚本零命中，豁免 %d 个自扫描器（%s）" % (
+            len([x for x in os.listdir(os.path.join(dst, 'tools')) if x.endswith('.py')]),
+            len(skipped), ", ".join(skipped) or "-"))
     add("PORTABLE", "仓内工具换机器也能跑：不写死本机路径、不逃出仓外",
-        "PASS" if not bad else "FAIL", "; ".join(bad) or f"扫 {len(os.listdir(os.path.join(dst, 'tools')))} 个脚本，零命中")
+        "PASS" if not bad else "FAIL", note)
 
     # ---- 汇总 ----
     n = {}
@@ -208,7 +224,8 @@ def main() -> int:
            "summary": n, "checks": rows}
     out_dir = os.path.join(HERE, "out")
     os.makedirs(out_dir, exist_ok=True)
-    with open(os.path.join(out_dir, "OUTSIDE_CHECK.json"), "w", encoding="utf-8") as f:
+    out_path = a.out or os.path.join(out_dir, "OUTSIDE_CHECK.json")
+    with open(out_path, "w", encoding="utf-8") as f:
         json.dump(doc, f, ensure_ascii=False, indent=2)
 
     print("OUTSIDE_CHECK（视角：别人 clone 这个仓）")

@@ -1,0 +1,80 @@
+{
+  "generated_at": "2026-11-27T19:22:33+08:00",
+  "label": "同操作者定向破坏（T4）：证明检查有灵敏度，不构成第三方见证",
+  "control_no_mutation": "OUTSIDE_OK",
+  "detected": 10,
+  "total": 10,
+  "verdict": "MUTATION_SUITE_ALL_DETECTED",
+  "cases": [
+    {
+      "id": "M01",
+      "desc": "v0.3 包末尾多一个字节",
+      "target": "HASH-pccp-bench_v0.3_candidate.zip",
+      "observed": "FAIL（期望 FAIL）",
+      "result": "DETECTED"
+    },
+    {
+      "id": "M02",
+      "desc": "S-0001 包含路径某层哈希翻一位",
+      "target": "INC-S0001",
+      "observed": "FAIL（期望 FAIL）",
+      "result": "DETECTED"
+    },
+    {
+      "id": "M03",
+      "desc": "S-0001 SET 签名翻一字节",
+      "target": "SET-S0001",
+      "observed": "FAIL（期望 FAIL）",
+      "result": "DETECTED"
+    },
+    {
+      "id": "M04",
+      "desc": "S-0001 checkpoint 签名翻一字节",
+      "target": "CP-S0001",
+      "observed": "FAIL（期望 FAIL）",
+      "result": "DETECTED"
+    },
+    {
+      "id": "M05",
+      "desc": "S-0001 条目 logIndex 加一",
+      "target": "REC-S0001",
+      "observed": "FAIL（期望 FAIL）",
+      "result": "DETECTED"
+    },
+    {
+      "id": "M06",
+      "desc": "A-0003 条目包含路径翻一位",
+      "target": "ZDEP-A0003",
+      "observed": "FAIL（期望 FAIL）",
+      "result": "DETECTED"
+    },
+    {
+      "id": "M07",
+      "desc": "COSE 签名末字节翻一位",
+      "target": "SCITT-TAG18",
+      "observed": "FAIL（期望 FAIL）",
+      "result": "DETECTED"
+    },
+    {
+      "id": "M08",
+      "desc": "v0.3.2 包砍掉末尾 EOCD 记录",
+      "target": "PKG-V032",
+      "observed": "ERROR（期望 FAIL/ERROR）",
+      "result": "DETECTED"
+    },
+    {
+      "id": "M09",
+      "desc": "Rekor 公钥 PEM 被删",
+      "target": "SET-S0001",
+      "observed": "FAIL（期望 FAIL/ERROR）",
+      "result": "DETECTED"
+    },
+    {
+      "id": "M10",
+      "desc": "工具里写死一条本机路径",
+      "target": "PORTABLE",
+      "observed": "FAIL（期望 FAIL）",
+      "result": "DETECTED"
+    }
+  ]
+}
