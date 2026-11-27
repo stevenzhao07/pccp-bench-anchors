@@ -1,0 +1,79 @@
+{
+  "profile_id": "pccp-bench-anchors/scitt-profile/v1",
+  "generated_at": "2026-11-27",
+  "scope_note": "这份声明只描述'回执的容器与可验性'，不描述'判据是否正确'。判对判错是另一条线（v0.3 题集与判器）。",
+  "conformance": {
+    "claimed": [
+      {
+        "id": "C1",
+        "claim": "产物字节以 sha256 摘要进入 Statement（subject digest 可重算）",
+        "evidence": "anchors/statement_A0003.cose + anchors/A0003_artifact_sha256.txt",
+        "verify": "python tools/verify_scitt_statement.py --statement anchors/statement_A0003.cose --pubkey-pem anchors/scitt_test_pub.pem --artifact <产物>",
+        "status": "PASS (本机，T4)"
+      },
+      {
+        "id": "C2",
+        "claim": "Statement 用 COSE_Sign1（ES256）承载，签名可被通用格式工具读取、可被零依赖实现验签",
+        "evidence": "anchors/statement_A0003.cose（483 B，四元素数组）",
+        "verify": "同上；负向翻签名字节应得 FAIL",
+        "status": "PASS (本机，T4)"
+      },
+      {
+        "id": "C3",
+        "claim": "条目在公共透明日志中的位置可被独立重算（leaf_index + path + tree_size → root_hash）",
+        "evidence": "anchors/A0003_entry.json + anchors/scitt_view_A0003.json",
+        "verify": "python tools/scitt_view.py --entry <entry> --rekor-key <pub> --artifact <产物>",
+        "status": "PASS (本机，T4)"
+      },
+      {
+        "id": "C4",
+        "claim": "日志侧有两道签名：checkpoint（树头）与 SET（条目），均可用日志公钥验",
+        "evidence": "scitt_view_A0003.json 的 receipt.checkpoint / receipt.set",
+        "verify": "同 scitt_view.py 的 CHECKPOINT / SET 两项",
+        "status": "PASS (本机，T4)"
+      },
+      {
+        "id": "C5",
+        "claim": "一条命令出全矩阵，任一项 FAIL 即整体 FAIL（不加权、不平均）",
+        "evidence": "tools/verify_all.py（含 SCITT_STATEMENT / RECEIPT_VIEW 两行）",
+        "verify": "python tools/verify_all.py ... ；负向换一字节应得 3 项 FAIL、退出码 1",
+        "status": "PASS (本机，T4)"
+      }
+    ],
+    "not_claimed": [
+      {
+        "id": "N1",
+        "what": "不是 Transparency Service 原生签发的 COSE Receipt",
+        "detail": "Rekor 条目是 hashedrekord，我们只做显式映射（mapping = rekor_entry_as_receipt_v1），不冒充原生 receipt"
+      },
+      {
+        "id": "N2",
+        "what": "Statement 的身份不是 Fulcio / OIDC 身份",
+        "detail": "signing key 是一次性测试密钥，issuer 写 urn:pccp-bench:test-key-20261127；正式锚定的身份在 A-0001/A-0003 的 Fulcio 证书里，两套密钥不通"
+      },
+      {
+        "id": "N3",
+        "what": "没有声明任何 SCITT 规范的 conformance",
+        "detail": "本文件是自述 profile（贴哪几条、不贴哪几条），不是规范符合性证书，也无第三方评定"
+      },
+      {
+        "id": "N4",
+        "what": "没有第三方实测",
+        "detail": "T1 = 0 件；表中所有 PASS 均为同操作者本机干跑（T4）"
+      },
+      {
+        "id": "N5",
+        "what": "不覆盖 CT（证书透明）签名验证",
+        "detail": "SCT 归属已验、签名不可由终证书重建（原因已记录），此处不作任何 SCT 通过声明"
+      }
+    ]
+  },
+  "how_to_reproduce": {
+    "deps": "Python 3.10+，验签侧零第三方依赖",
+    "steps": [
+      "python tools/verify_all.py --entry <entry.json> --public-key <rekor_publicKey.json> --bundle <bundle> --artifact <产物> --statement <statement.cose> --statement-pubkey <pub.pem>",
+      "python tools/scitt_view.py --entry <entry.json> --rekor-key <rekor_publicKey.json> --artifact <产物> --out <view.json>"
+    ],
+    "expect": "ALL_PASS（7~8 行）；负向改动产物一字节应得 BINDING/SCITT_STATEMENT/RECEIPT_VIEW 三项 FAIL、退出码 1"
+  }
+}

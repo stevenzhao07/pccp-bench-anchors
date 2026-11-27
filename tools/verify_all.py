@@ -46,6 +46,19 @@ def find_status(text, keys):
     return None
 
 
+def normalize_entry(path):
+    """Rekor 两种形态：raw（{uuid: rec}）与摊平（rec 本身）。
+    老判据（verify_anchor/set/logid_binding）只吃 raw，零依赖判据只吃摊平。
+    这里统一成 raw 交给老判据，摊平那份原样交给新判据 —— 不靠"记得用哪种文件"。"""
+    d = json.load(open(path, encoding="utf-8"))
+    if "body" in d and "verification" in d:      # 摊平形态
+        tmp = os.path.join(os.environ.get("TEMP", "."), "_entry_raw_" + str(os.getpid()) + ".json")
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump({"_flattened": d}, f)
+        return path, tmp
+    return path, path
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--entry", required=True)
@@ -58,22 +71,25 @@ def main() -> int:
     ap.add_argument("--receipt")
     ap.add_argument("--dataset")
     ap.add_argument("--engine")
+    ap.add_argument("--statement", help="COSE_Sign1 签的 Signed Statement（SCITT 形状）")
+    ap.add_argument("--statement-pubkey", help="验 statement 签名用的 PEM 公钥")
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args()
 
     rows = []   # (name, status, detail)
+    flat_entry, raw_entry = normalize_entry(a.entry)
 
-    rc, out = run("verify_logid_binding.py", ["--entry", a.entry, "--public-key", a.public_key, "--live"])
+    rc, out = run("verify_logid_binding.py", ["--entry", raw_entry, "--public-key", a.public_key, "--live"])
     st = find_status(out, ["status"])
     rows.append(("LOGID_BINDING", st, "logID == SHA-256(SPKI DER); 远端公钥一致" if st == "LOGID_BOUND" else "") )
 
-    rc, out = run("verify_anchor.py", ["--entry", a.entry, "--public-key", a.public_key])
+    rc, out = run("verify_anchor.py", ["--entry", raw_entry, "--public-key", a.public_key])
     inc_ok = "inclusion      = OK" in out
     cp_ok = "checkpoint_sig = OK" in out
     rows.append(("INCLUSION", "OK" if inc_ok else "FAIL", ""))
     rows.append(("CHECKPOINT", "OK" if cp_ok else "FAIL", ""))
 
-    rc, out = run("verify_set.py", ["--entry", a.entry, "--public-key", a.public_key])
+    rc, out = run("verify_set.py", ["--entry", raw_entry, "--public-key", a.public_key])
     st = find_status(out, ["status"])
     rows.append(("SET", "OK" if st == "SET_VERIFIED" else "FAIL", ""))
 
@@ -95,10 +111,26 @@ def main() -> int:
 
     if a.receipt and a.dataset and a.engine:
         rc, out = run("verify_receipt.py", ["--receipt", a.receipt, "--dataset", a.dataset,
-                                            "--engine", a.engine, "--rekor-entry", a.entry,
+                                            "--engine", a.engine, "--rekor-entry", raw_entry,
                                             "--public-key", a.public_key])
         st = find_status(out, ["status"])
         rows.append(("RECEIPT", "OK" if st == "RECEIPT_VALID" else "FAIL", ""))
+
+    if a.statement and a.statement_pubkey:
+        sa = ["--statement", a.statement, "--pubkey-pem", a.statement_pubkey]
+        if a.artifact:
+            sa += ["--artifact", a.artifact]
+        rc, out = run("verify_scitt_statement.py", sa)
+        rows.append(("SCITT_STATEMENT", "OK" if "SCITT_ALL_PASS" in out else "FAIL",
+                     "COSE_Sign1 零依赖验签 + 载荷绑定" if "SCITT_ALL_PASS" in out else ""))
+
+    # 收据语义视图：把 Rekor 条目映射成 receipt，并当场重算（不代表原生 COSE Receipt）
+    sv = ["--entry", flat_entry, "--rekor-key", a.public_key]
+    if a.artifact:
+        sv += ["--artifact", a.artifact]
+    rc, out = run("scitt_view.py", sv)
+    rows.append(("RECEIPT_VIEW", "OK" if "ALL_PASS" in out else "FAIL",
+                 "Rekor→receipt 显式映射（非原生 COSE Receipt）" if "ALL_PASS" in out else ""))
 
     overall = "ALL_PASS" if all(r[1] in ("OK", "LOGID_BOUND") for r in rows) else "HAS_FAIL"
     if a.json:
@@ -109,7 +141,7 @@ def main() -> int:
         print(f"{'判据':<18}{'结果':<13}说明")
         print("-" * 64)
         for name, status, detail in rows:
-            print(f"{name:<18}{status:<13}{detail}")
+            print(f"{name:<18}{str(status):<13}{detail}")
         print("-" * 64)
         print(overall)
     return 0 if overall == "ALL_PASS" else 1
@@ -117,3 +149,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
