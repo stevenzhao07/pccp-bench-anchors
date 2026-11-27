@@ -1,0 +1,7 @@
+{
+ "kit_cases": 10,
+ "a_vs_label": "n=10  po=1.0  pe=0.34  κ=1.0",
+ "b_vs_label": "n=10  po=0.7  pe=0.36  κ=0.5312",
+ "a_matches_original_label": 10,
+ "label": "同操作者干跑（T4），不是独立标注（T1）"
+}
