@@ -61,3 +61,26 @@ cosign verify-blob --bundle xxx.sigstore.json \
 **前提必须一起读**：判器需要 `base.py` 里的 `is_unusable / misused` 两个函数，而发布快照与本地引擎树不同源，
 这两个函数在原始 base 里不存在。`repro/` 里的实现是**按唯一调用点重建**的，同分是旁证，不是"重建=原实现"。
 要让"可复算"名副其实，下一步是把 base 原始字节纳入发布物并在 MANIFEST 登记 sha256。
+
+## tools/ —— 每条判据各一个脚本，再收成一条命令
+
+| 脚本 | 判据 | 它拦得住什么 |
+|---|---|---|
+| `verify_logid_binding.py` | logID == SHA-256(SPKI DER)，且与远端现取公钥同一把钥匙 | 换一把钥匙、把 logID 照抄 |
+| `verify_rekor_inclusion.py` / `verify_anchor.py` | RFC 6962 自算路径 → 树根；checkpoint 签名 | 日志声称"在树里"但路径算不出来 |
+| `verify_set.py` | 条目规范化 JSON 的 P-256 签名 | 伪造单条记录 |
+| `verify_bundle.py` | 产物字节 == bundle digest == 条目 digest；issuer/SAN 身份 | "签名是真的，但签的是别的东西" |
+| `verify_fulcio_chain.py` | leaf ← intermediate ← root（Sigstore 官方信任根） | 字段照抄的伪造证书 |
+| `verify_all.py` | 上面全部 + （可选）回执十条判据 | 人肉判断"哪个输出算通过" |
+
+一条命令：
+
+```bash
+python tools/verify_all.py \
+  --entry anchor_entry_A0002.json --public-key rekor_publicKey.json \
+  --bundle anchor_A0002.sigstore.json --artifact anchor_A0002_artifact.bin \
+  --integrated-time 1795756228 \
+  --expect-identity-regex '^https://github\.com/stevenzhao07/pccp-bench-anchors/'
+```
+
+输出是矩阵，最后一行 `ALL_PASS` / `HAS_FAIL`。任一项 FAIL 就不算通过——**不做加权、不取平均**。
