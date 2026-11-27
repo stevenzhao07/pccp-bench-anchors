@@ -1,0 +1,1022 @@
+{
+ "package": "C:\\Users\\SZYL\\AppData\\Local\\Temp\\iso_v031",
+ "cases": 51,
+ "single_flip": {
+  "pairs": 663,
+  "flips": 443,
+  "rate": 0.6682,
+  "mean_per_case": 8.69,
+  "cases_with_zero_sensitivity": []
+ },
+ "flip_all": {
+  "unchanged": [],
+  "n_unchanged": 0
+ },
+ "baseline_always_go": 0.5882,
+ "rows": [
+  {
+   "case_id": "DEN250057-M1-RETRAIN",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260973-H1-DICE-MISS",
+   "baseline": "reject",
+   "label": "reject",
+   "n_bool": 13,
+   "n_sensitive": 5,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260973-M1-TRAIN-DATA",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260973-N1-UNDESCRIBED-ORGAN",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 4,
+   "sensitive_flags": [
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "P240006-HW-COVERAGE-GAP",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 9,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260217-EXTEND-ABDOMEN",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 4,
+   "sensitive_flags": [
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K253281-C1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K253281-C2",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K253281-C5",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K254123-M1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K254123-M2",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K254123-M3",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K254297-M1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K254297-M2",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260217-M-submitted",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260597-M1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260597-M2",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260619-M1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260811-M1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260906-P1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260906-P6",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260906-P7",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K260906-P8",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K261517-M1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K261623-M1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K261623-M2",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K261623-M3",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K261896-1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K261896-2",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K261896-3",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K261962-M1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "K263035-M1",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-IU-PEDIATRIC-EXPAND",
+   "baseline": "reject",
+   "label": "reject",
+   "n_bool": 13,
+   "n_sensitive": 2,
+   "sensitive_flags": [
+    "affects_intended_use",
+    "remains_se_to_predicate"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-IU-NEW-CLINICAL-CLAIM",
+   "baseline": "reject",
+   "label": "reject",
+   "n_bool": 13,
+   "n_sensitive": 2,
+   "sensitive_flags": [
+    "affects_intended_use",
+    "remains_se_to_predicate"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-NO-PCCP-ROADMAP",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 5,
+   "sensitive_flags": [
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "claimed_pccp_coverage",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-NO-PCCP-SITE-CHANGE",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 4,
+   "sensitive_flags": [
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-SE-NOT-MAINTAINED-HW",
+   "baseline": "reject",
+   "label": "reject",
+   "n_bool": 13,
+   "n_sensitive": 1,
+   "sensitive_flags": [
+    "remains_se_to_predicate"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-SE-PREDICATE-DELISTED",
+   "baseline": "reject",
+   "label": "reject",
+   "n_bool": 13,
+   "n_sensitive": 1,
+   "sensitive_flags": [
+    "remains_se_to_predicate"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-VAL-MASKED-SPLIT-MISSING",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 8,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-VAL-SUBGROUP-OMITTED",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 8,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-LVH-NOT-VERSIONED",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 9,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-LVH-USER-NOTICE-MISSING",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 9,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-UDI-NOT-UPDATED",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 10,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-AC-CI-LOWER-BOUND",
+   "baseline": "reject",
+   "label": "reject",
+   "n_bool": 13,
+   "n_sensitive": 5,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-CLASS-ENSEMBLE-UNDESCRIBED",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 10,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-SCOPE-BORDERLINE-REGION",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 4,
+   "sensitive_flags": [
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-SUPPLIER-SECOND-SOURCE-OUT",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 4,
+   "sensitive_flags": [
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-SCOPE-CLEANROOM-NOT-LISTED",
+   "baseline": "hold",
+   "label": "hold",
+   "n_bool": 13,
+   "n_sensitive": 4,
+   "sensitive_flags": [
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-EVIDENCE-REAL-WORLD-ONLY",
+   "baseline": "reject",
+   "label": "reject",
+   "n_bool": 13,
+   "n_sensitive": 5,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "remains_se_to_predicate",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-GO-WITH-ALL-FLAGS-EXERCISED",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  },
+  {
+   "case_id": "SYN-GO-PROCESS-NEGATIVE-PREMISE",
+   "baseline": "go",
+   "label": "go",
+   "n_bool": 13,
+   "n_sensitive": 11,
+   "sensitive_flags": [
+    "pccp_authorized",
+    "affects_intended_use",
+    "change_class_described",
+    "remains_se_to_predicate",
+    "validation_documented",
+    "labeling_version_history",
+    "udi_updated",
+    "claimed_pccp_coverage",
+    "actually_within_scope",
+    "criteria_measured",
+    "criteria_met"
+   ],
+   "flip_all_moves": true,
+   "flip_all_verdict": "reject"
+  }
+ ]
+}
