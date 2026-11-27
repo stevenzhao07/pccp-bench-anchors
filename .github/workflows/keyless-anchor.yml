@@ -1,0 +1,74 @@
+name: keyless-anchor
+
+# 用 GitHub Actions 自带的 OIDC 身份（issuer = token.actions.githubusercontent.com）
+# 对跑分产物做 keyless 签名并写入公共 Rekor。
+#
+# 为什么走这条路：公司机 curl accounts.google.com / github.com 均超时，
+# 浏览器交互登录出不去；而 Actions 的 OIDC token 由平台直接签发，不需要浏览器，
+# 且证书里写死的身份是"仓库 + 工作流路径 + 分支"，比邮箱这个身份更强——
+# 它证明的是"这份产物由这个仓库的这条工作流产出"，不是"某个邮箱点了一次登录"。
+
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_url:
+        description: "要锚定的产物直链（留空则用默认数据集）"
+        required: false
+        default: "https://zenodo.org/records/24550267/files/pccp-bench_zenodo_v0.1.0.zip"
+      expect_sha256:
+        description: "期望的 sha256（留空则只打印实测值）"
+        required: false
+        default: "1907e93a21305c3055777dda2f3c85f037501d821bba08abb37f7ac8127aaf61"
+
+permissions:
+  contents: read
+  id-token: write   # 必须，否则拿不到 OIDC token
+
+jobs:
+  anchor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 取回产物并核对哈希
+        run: |
+          set -euo pipefail
+          URL="${{ inputs.artifact_url }}"
+          curl -fsSL --retry 3 -o artifact.bin "$URL"
+          ls -l artifact.bin
+          ACTUAL=$(sha256sum artifact.bin | awk '{print $1}')
+          echo "sha256=$ACTUAL"
+          echo "ACTUAL_SHA=$ACTUAL" >> "$GITHUB_ENV"
+          EXP="${{ inputs.expect_sha256 }}"
+          if [ -n "$EXP" ] && [ "$ACTUAL" != "$EXP" ]; then
+            echo "::error::sha256 不一致：期望 $EXP，实测 $ACTUAL"; exit 1
+          fi
+
+      - name: keyless 签名（Fulcio + Rekor）
+        uses: sigstore/gh-action-sigstore-python@v3.0.0
+        with:
+          inputs: ./artifact.bin
+          release-signing-artifacts: false
+
+      - name: 打印 bundle 关键字段
+        run: |
+          python - <<'PY'
+          import json,glob
+          for p in glob.glob("*.sigstore.json"):
+              d=json.load(open(p))
+              v=d.get("verificationMaterial",{})
+              print("bundle:",p)
+              print(" tlog entries:",len(v.get("tlogEntries",[])))
+              for e in v.get("tlogEntries",[]):
+                  print("  logIndex",e.get("logIndex"),"logId",e.get("logId",{}).get("keyId","")[:16])
+              print(" cert:", (v.get("certificate") or {}).get("rawBytes","")[:40],"...")
+          PY
+
+      - name: 上传 bundle 与产物哈希
+        uses: actions/upload-artifact@v4
+        with:
+          name: keyless-bundle
+          path: |
+            *.sigstore.json
+            artifact.bin
+          retention-days: 90

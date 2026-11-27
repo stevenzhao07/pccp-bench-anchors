@@ -1,2 +1,48 @@
 # pccp-bench-anchors
-PCCP-bench 产物锚定记录：GitHub Actions OIDC keyless 签名 + 公共 Rekor 条目，第三方可独立验算
+
+PCCP-bench 产物的**锚定记录仓**。每次锚定由本仓的一条 GitHub Actions 工作流完成：
+
+1. 取回指定产物（默认 PCCP-bench v0.1.0 数据集 zip）
+2. 校验 sha256（与期望值不符则直接失败，不产出具签名）
+3. 用工作流的 OIDC 身份做 keyless 签名（Fulcio 短时证书）
+4. 把签名条目写进公共 Rekor 透明日志
+5. 上传 sigstore bundle 与产物副本作为构建产物（保留 90 天）
+
+## 这条记录证明了什么
+
+- 该产物的**确切字节**（sha256 可复算）
+- 该产物**由本仓的这条工作流、在这个 commit、这个分支上产出**——证书里写死的身份形如
+  `https://github.com/stevenzhao07/pccp-bench-anchors/.github/workflows/keyless-anchor.yml@refs/heads/main`
+- 该记录在**某个时刻**进入了 append-only 公共日志，任何人可独立验算包含性证明、checkpoint 签名与 SET
+
+## 没证明什么
+
+- 不证明产物**内容正确**（哈希只保证"是这份字节"，不保证"这份字节是对的"）
+- 不证明 PCCP 判定结论成立——判定本身由回执工具链另行校验
+- 不证明这是**首次/最强**的任何事
+- 仓库可见 ≠ 内容可信：信任来自"哈希 + 日志 + 可复算"，不是来自本 README
+
+## 如何独立验证（不需要信任本仓）
+
+见 `VERIFY.md`。最短路径：
+
+```
+cosign verify-blob --bundle xxx.sigstore.json \
+  --certificate-identity-regexp 'https://github.com/stevenzhao07/pccp-bench-anchors/.*' \
+  --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+  artifact.bin
+```
+
+不装 cosign 也可以：bundle 里的条目结构与 Rekor 公共 API 一致，可直接取
+`https://rekor.sigstore.dev/api/v1/log/entries?logIndex=...` 自己算 Merkle 路径。
+
+## 目录
+
+- `.github/workflows/keyless-anchor.yml` —— 锚定工作流（手动触发，参数可选）
+- `VERIFY.md` —— 验算步骤与判据
+
+## 边界
+
+- 产物内容与许可跟随其上游（数据集 CC BY 4.0，代码 MIT）
+- 本仓只放"锚定这件事"的记录，不放评测结论、不放厂商声明
+- 任何对外表述必须写清缺口；未验证的一律标未验证
