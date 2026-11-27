@@ -1,0 +1,94 @@
+{
+ "checked_at": "2026-11-27",
+ "channel_from": "Muse(T2) 的建议，逐条现场核",
+ "rows": [
+  {
+   "status": null,
+   "final_url": "https://slack.sigstore.dev/",
+   "note": "URLError: <urlopen error [Errno 11001] getaddrinfo failed>",
+   "name": "sigstore-slack",
+   "url": "https://slack.sigstore.dev/",
+   "verdict": "不可用"
+  },
+  {
+   "status": 403,
+   "final_url": "https://openssf.slack.com/archives/C01D7D31WT7",
+   "note": "需登录/受限",
+   "name": "openssf-slack-archive",
+   "url": "https://openssf.slack.com/archives/C01D7D31WT7",
+   "verdict": "需登录"
+  },
+  {
+   "status": 200,
+   "final_url": "https://mail.python.org/mailman/listinfo",
+   "note": "OK",
+   "name": "python-mail-lists",
+   "url": "https://mail.python.org/mailman/listinfo",
+   "verdict": "可用"
+  },
+  {
+   "status": null,
+   "final_url": "https://news.ycombinator.com/submit",
+   "note": "URLError: <urlopen error timed out>",
+   "name": "hacker-news-submit",
+   "url": "https://news.ycombinator.com/submit",
+   "verdict": "不可用"
+  },
+  {
+   "status": 200,
+   "final_url": "https://users.rust-lang.org/c/tutorial/7",
+   "note": "OK",
+   "name": "users.rust-lang",
+   "url": "https://users.rust-lang.org/c/help/7",
+   "verdict": "可用"
+  },
+  {
+   "status": 200,
+   "final_url": "https://opensource.ieee.org/users/sign_in",
+   "note": "OK",
+   "name": "ieee-sa-open",
+   "url": "https://opensource.ieee.org/medical-devices",
+   "verdict": "可用"
+  },
+  {
+   "status": 200,
+   "final_url": "https://datatracker.ietf.org/wg/scitt/about/",
+   "note": "OK",
+   "name": "ietf-datatracker-scitt",
+   "url": "https://datatracker.ietf.org/wg/scitt/about/",
+   "verdict": "可用"
+  },
+  {
+   "status": 200,
+   "final_url": "https://www.w3.org/community/credentials/",
+   "note": "OK",
+   "name": "w3c-ccg",
+   "url": "https://www.w3.org/community/credentials/",
+   "verdict": "可用"
+  },
+  {
+   "status": 404,
+   "final_url": "https://mlcommons.org/working-groups/ai-risk-verification/",
+   "note": "HTTP 404",
+   "name": "mlcommons-medperf",
+   "url": "https://mlcommons.org/working-groups/ai-risk-verification/",
+   "verdict": "不可用"
+  },
+  {
+   "status": 200,
+   "final_url": "https://github.com/stevenzhao07/pccp-bench-anchors",
+   "note": "OK",
+   "name": "github-repo",
+   "url": "https://github.com/stevenzhao07/pccp-bench-anchors",
+   "verdict": "可用"
+  },
+  {
+   "status": 200,
+   "final_url": "https://rekor.sigstore.dev/api/v1/log/entries?logIndex=4143787841",
+   "note": "OK",
+   "name": "rekor-entry",
+   "url": "https://rekor.sigstore.dev/api/v1/log/entries?logIndex=4143787841",
+   "verdict": "可用"
+  }
+ ]
+}
