@@ -38,6 +38,13 @@
         "evidence": "tools/verify_all.py（含 SCITT_STATEMENT / RECEIPT_VIEW 两行）",
         "verify": "python tools/verify_all.py ... ；负向换一字节应得 3 项 FAIL、退出码 1",
         "status": "PASS (本机，T4)"
+      },
+      {
+        "id": "C6",
+        "claim": "负向可控：产物改一字节后矩阵必须 FAIL 且退出码非 0（证明前几条不是永远通过）",
+        "evidence": "tools/verify_profile.py 的 C6 检查（临时副本，不动原件）",
+        "verify": "python tools/verify_profile.py --entry ... --artifact <产物> --profile scitt_profile.json",
+        "status": "PASS (本机，T4)"
       }
     ],
     "not_claimed": [
