@@ -1,0 +1,19 @@
+{
+  "_how_to_use": "把每个尖括号换成你的内容；不需要的项写 null。不要删字段。",
+  "reviewer": "<你的名字或代号>",
+  "independent": true,
+  "relationship": "<你与本项目的关系，一句话；例：与作者不认识，仅为验证公开材料>",
+  "machine": "<操作系统 + Python 版本>",
+  "checked_at": "<YYYY-MM-DDTHH:MM:SS+08:00>",
+  "path": "A",
+  "a_results": {
+    "zero_dep_verify": "<ZERO_DEP_ALL_PASS 或 HAS_FAIL>",
+    "exit_code": 0,
+    "package_selfcheck": "<SELFCHECK_ALL_PASS / HAS_FAIL / 没跑>",
+    "package_verdict_match": "<如 51/51>"
+  },
+  "b_results": null,
+  "b_note": "选路径 B 时，把 t1_encode_template.csv 填好与这里一起回传；b_results 填判决输出原文",
+  "disagreements": "<与你预期不符的地方，没有写 none>",
+  "raw_output": "<把你的终端输出整段贴进来，不要删改>"
+}
