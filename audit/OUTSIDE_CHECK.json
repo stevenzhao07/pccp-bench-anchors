@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-11-27T19:15:11+08:00",
+  "repo": "C:\\Users\\SZYL\\Doubao\\chats\\2026-11-26\\new-chat-75\\bench_receipt\\anchors_repo",
+  "simulated_clone": "C:\\Users\\SZYL\\AppData\\Local\\Temp\\outside_5yodj_5d\\repo",
+  "scope": "只用仓内文件，不读开发机 out/ dist/",
+  "label": "同操作者换目录干跑（T4），不是第三方实测（T1）",
+  "verdict": "OUTSIDE_OK",
+  "summary": {
+    "PASS": 12
+  },
+  "checks": [
+    {
+      "id": "HASH-pccp-bench_v0.3_candidate.zip",
+      "claim": "proof/pccp-bench_v0.3_candidate.zip 的 sha256 与台账登记值逐位相等",
+      "status": "PASS",
+      "detail": "d684eaca7b2ba324… size=69421"
+    },
+    {
+      "id": "HASH-receipt_demo5.canonical.json",
+      "claim": "receipts/receipt_demo5.canonical.json 的 sha256 与台账登记值逐位相等",
+      "status": "PASS",
+      "detail": "b19fd9d6dc473fee… size=761"
+    },
+    {
+      "id": "INC-S0001",
+      "claim": "verify_rekor_inclusion.py 只用仓内字节即可通过",
+      "status": "PASS",
+      "detail": "4023793372 | hTOUi7Em... |   NOT_CHECKED   = checkpoint 签名 / SET 签名（未实现，不得称为已通过）"
+    },
+    {
+      "id": "SET-S0001",
+      "claim": "verify_set.py 只用仓内字节即可通过",
+      "status": "PASS",
+      "detail": "  \"integratedTime\": 1795770765, |   \"set_sha256\": \"d7e2f81e75e1b9e9\" | }"
+    },
+    {
+      "id": "CP-S0001",
+      "claim": "verify_anchor.py 只用仓内字节即可通过",
+      "status": "PASS",
+      "detail": "  WARN           = 条目 record.logIndex 与 proof.logIndex 不一致，需记待核 |   NOT_IMPLEMENTED= SET 签名 / logID↔公钥登记校验 | ANCHOR_VERIFIED"
+    },
+    {
+      "id": "REC-S0001",
+      "claim": "仓内条目自带 logIndex 与 hash 与台账一致",
+      "status": "PASS",
+      "detail": "logIndex=4145697630 kind=hashedrekord sha=bda911e8d9a794b6…"
+    },
+    {
+      "id": "ZDEP-A0003",
+      "claim": "六项（绑定/LOGID/包含/checkpoint/SET/证书链）只用仓内字节全过",
+      "status": "PASS",
+      "detail": "  SET            OK       sorted-compact |   CHAIN          OK       leaf<-intermediate=True; intermediate<-root=True | ZERO_DEP_ALL_PASS"
+    },
+    {
+      "id": "SCITT-TAG18",
+      "claim": "COSE_Sign1（tag 18）只用仓内字节验得过并与包绑定",
+      "status": "PASS",
+      "detail": "  SUBJECT_SHA256 d684eaca7b2ba32483c23a1474815bf0314dd2cdf8770648eb7b6e2c1826ed99 |   BINDING        OK | SCITT_ALL_PASS"
+    },
+    {
+      "id": "SCITT-UNTAGGED",
+      "claim": "COSE_Sign1（untagged）只用仓内字节验得过并与包绑定",
+      "status": "PASS",
+      "detail": "  SUBJECT_SHA256 d684eaca7b2ba32483c23a1474815bf0314dd2cdf8770648eb7b6e2c1826ed99 |   BINDING        OK | SCITT_ALL_PASS"
+    },
+    {
+      "id": "SCITT-TAMPER",
+      "claim": "篡改一字节必须验不过",
+      "status": "PASS",
+      "detail": "  SUBJECT_SHA256 d684eaca7b2ba32483c23a1474815bf0314dd2cdf8770648eb7b6e2c1826ed99 | SCITT_HAS_FAIL"
+    },
+    {
+      "id": "PKG-V032",
+      "claim": "包在临时目录里自跑 51/51",
+      "status": "PASS",
+      "detail": "verdict_match  51/51 | tag_rate       1.0000 | SELFCHECK_ALL_PASS"
+    },
+    {
+      "id": "PORTABLE",
+      "claim": "仓内工具换机器也能跑：不写死本机路径、不逃出仓外",
+      "status": "PASS",
+      "detail": "扫 18 个脚本，零命中"
+    }
+  ]
+}

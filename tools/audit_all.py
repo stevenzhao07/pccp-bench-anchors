@@ -242,6 +242,20 @@ def check_blind_kit():
         "成员 %d 个；%s" % (len(names), "; ".join(problems) or "无泄漏"))
 
 
+# ---------------- 9.5 外人视角：把仓拷到临时目录，只用仓内字节验 ----------------
+def check_outside():
+    rc, txt = run(["outside_check.py"], timeout=300)
+    ok = rc == 0 and "OUTSIDE_OK" in txt
+    add("OUTSIDE", "outside",
+        "把 anchors_repo 拷到临时目录后，只用仓内 tools/ proof/ certs/ 就能验完 12 项",
+        "PASS" if ok else "FAIL", tail(txt, 3))
+    rc2, txt2 = run(["outside_check.py", "--selftest"], timeout=120)
+    ok2 = rc2 == 0 and "PORTABLE_SELFTEST_OK" in txt2
+    add("OUTSIDE-SELFTEST", "outside",
+        "可移植性扫描的非空性：种入一条本机路径后必须被抓到（否则该检查是摆设）",
+        "PASS" if ok2 else "FAIL", tail(txt2, 2))
+
+
 # ---------------- 9. 口径机审 ----------------
 def check_claims():
     if not os.path.isdir(ANCHORS):
@@ -353,6 +367,7 @@ def main():
     check_pkg_selfcheck()
     check_kappa()
     check_blind_kit()
+    check_outside()
     check_claims()
     if a.with_network:
         check_network()
