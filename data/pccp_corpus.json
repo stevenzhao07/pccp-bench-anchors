@@ -1,0 +1,634 @@
+{
+ "source": "https://api.fda.gov/device/pma.json",
+ "query": "ao_statement:\"PCCP\"",
+ "reproduce_url": "https://api.fda.gov/device/pma.json?search=ao_statement%3A%22PCCP%22&limit=100",
+ "total_hits": 47,
+ "captured": 47,
+ "by_year": {
+  "2024": 5,
+  "2025": 26,
+  "2026": 16
+ },
+ "top_applicants": [
+  [
+   "Medtronic, Inc.",
+   24
+  ],
+  [
+   "Medtronic Cardiac Rhythm Disease Management",
+   7
+  ],
+  [
+   "ABBOTT MEDICAL",
+   7
+  ],
+  [
+   "Biosense Webster, Inc.",
+   2
+  ],
+  [
+   "Tusker Medical, Inc.",
+   1
+  ],
+  [
+   "Physio-Control, Inc.",
+   1
+  ],
+  [
+   "Caris Life Sciences",
+   1
+  ],
+  [
+   "Medtronic Minimed",
+   1
+  ],
+  [
+   "Nevro Corporation",
+   1
+  ],
+  [
+   "Tempus AI, Inc.",
+   1
+  ]
+ ],
+ "by_reason": [
+  [
+   "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   35
+  ],
+  [
+   "Change Design/Components/Specifications/Material",
+   11
+  ],
+  [
+   "Location Change - Manufacturer/Sterilizer/Packager/Supplier",
+   1
+  ]
+ ],
+ "records": [
+  {
+   "pma": "P920015",
+   "supplement": "S297",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Medtronic(R) Transvene Lead System",
+   "generic_name": "Permanent defibrillator electrodes",
+   "product_code": "NVY",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P170006",
+   "supplement": "S040",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Avalus Bioprostheses",
+   "generic_name": "heart-valve, non-allograft tissue",
+   "product_code": "LWR",
+   "decision_date": "2026-02-12",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a Pre-Determined Change Control Plan (PCCP) that establishes a standardized qualification process for new bovine and porcine tissue suppliers, provided they do not impact the tissue's specifications, the established methods for its sourcing, handling, and testing, or the qualification standards for supplier facilities and personnel for the devices under the above PMAs"
+  },
+  {
+   "pma": "P200046",
+   "supplement": "S045",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Harmony Transcatheter Pulmonary Valve",
+   "generic_name": "Pulmonary valve prosthesis percutaneously delivered",
+   "product_code": "NPV",
+   "decision_date": "2026-02-12",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a Pre-Determined Change Control Plan (PCCP) that establishes a standardized qualification process for new bovine and porcine tissue suppliers, provided they do not impact the tissue's specifications, the established methods for its sourcing, handling, and testing, or the qualification standards for supplier facilities and personnel for the devices under the above PMAs"
+  },
+  {
+   "pma": "P190016",
+   "supplement": "S007",
+   "applicant": "Tusker Medical, Inc.",
+   "trade_name": "Tula® System",
+   "generic_name": "Tympanostomy tube delivery product with drug",
+   "product_code": "QJA",
+   "decision_date": "2024-02-01",
+   "supplement_type": "Normal 180 Day Track",
+   "supplement_reason": "Location Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "which requested approval for modifications to the design of the Iontophoresis System (IPS) Earset and Tube Delivery System (TDS) components of the Tula System, collectively described as the next generation (Tula Gen 2), as well as modifications to the Tula System packaging configuration and tray sealing. Finally, your supplement requested approval for a Predetermined Change Control Plan (PCCP) for an alternate microcontroller component."
+  },
+  {
+   "pma": "P990001",
+   "supplement": "S123",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Diva Platform Implantable Pulse Generators; PRO VIT Application Software",
+   "generic_name": "Pulse generator, permanent, implantable",
+   "product_code": "NVZ",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P980016",
+   "supplement": "S918",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "trade_name": "Virtuso/Entrust/Maximo/Intrinsic/Marquis/Implantable Cardiverter Defibrillators",
+   "generic_name": "Implantable cardioverter defibrillator (non-CRT)",
+   "product_code": "LWS",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P130021",
+   "supplement": "S179",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Evolut PRO, PRO+, FX, FX+",
+   "generic_name": "Aortic valve, prosthesis, percutaneously delivered",
+   "product_code": "NPT",
+   "decision_date": "2026-02-12",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a Pre-Determined Change Control Plan (PCCP) that establishes a standardized qualification process for new bovine and porcine tissue suppliers, provided they do not impact the tissue's specifications, the established methods for its sourcing, handling, and testing, or the qualification standards for supplier facilities and personnel for the devices under the above PMAs"
+  },
+  {
+   "pma": "P160026",
+   "supplement": "S040",
+   "applicant": "Physio-Control, Inc.",
+   "trade_name": "LIFEPAK® 35 Monitor/Defibrillator",
+   "generic_name": "Automated external defibrillators (non-wearable)",
+   "product_code": "MKJ",
+   "decision_date": "2024-04-12",
+   "supplement_type": "Normal 180 Day Track",
+   "supplement_reason": "Change Design/Components/Specifications/Material",
+   "ao_statement": "Approval for a new model of professional-use automated external defibrillator (AED), the LIFEPAK 35 Monitor/Defibrillator, the LIFEPAK Therapy Cable, LIFEPAK FLEX Lithium-Ion Battery and a Predetermined Change Control Plan (PCCP), dated April 10, 2024, for noninvasive blood pressure modules and cleaning modifications."
+  },
+  {
+   "pma": "P240010",
+   "supplement": "S001",
+   "applicant": "Caris Life Sciences",
+   "trade_name": "MI Cancer Seek",
+   "generic_name": "Next generation sequencing oncology panel, somatic or germline variant detection system",
+   "product_code": "PQP",
+   "decision_date": "2025-02-06",
+   "supplement_type": "Real-Time Process",
+   "supplement_reason": "Change Design/Components/Specifications/Material",
+   "ao_statement": "Approval for a predetermined change control plan (PCCP) that includes minor software modifications consistent with the intended use of the assay and qualification of serial number-controlled instrument changes."
+  },
+  {
+   "pma": "P030036",
+   "supplement": "S151",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "trade_name": "Medtronic Selectsecure Lead Model 3830",
+   "generic_name": "Drug eluting permanent right ventricular (RV) or right atrial (RA) pacemaker electrodes",
+   "product_code": "NVN",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P250022",
+   "supplement": "S001",
+   "applicant": "ABBOTT MEDICAL",
+   "trade_name": "Volt PFA Catheter Sensor Enabled",
+   "generic_name": "Percutaneous Cardiac Ablation Catheter for Treatment of Atrial Fibrillation with Irreversible Electroporation",
+   "product_code": "QZI",
+   "decision_date": "2026-03-23",
+   "supplement_type": "Normal 180 Day Track",
+   "supplement_reason": "Change Design/Components/Specifications/Material",
+   "ao_statement": "approval for minor design modifications, addition of Alajuela, Costa Rica as a manufacturing site, addition of Minnetonka, Minnesota as a basket subassembly manufacturing site, and addition of two Ethylene Oxide sterilization sites. Additionally, you requested approval for a Pre-Determined Change Control Plan (PCCP) that establishes updates to component suppliers for second source components for the balloon, splines, and center lumen of the catheter, provided they do not impact the specifications, the established methods for its sourcing, handling, and testing, or the qualification standards for supplier facilities and personnel for the devices under the above PMA."
+  },
+  {
+   "pma": "P890003",
+   "supplement": "S475",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Synergyst II Pulse Generator Models 7070 & 7071",
+   "generic_name": "Pulse generator, permanent, implantable",
+   "product_code": "NVZ",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P140017",
+   "supplement": "S033",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Melody Transcatheter Pulmonary Valve",
+   "generic_name": "Pulmonary valve prosthesis percutaneously delivered",
+   "product_code": "NPV",
+   "decision_date": "2026-02-12",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a Pre-Determined Change Control Plan (PCCP) that establishes a standardized qualification process for new bovine and porcine tissue suppliers, provided they do not impact the tissue's specifications, the established methods for its sourcing, handling, and testing, or the qualification standards for supplier facilities and personnel for the devices under the above PMAs"
+  },
+  {
+   "pma": "P120017",
+   "supplement": "S038",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Model 5071 Lead",
+   "generic_name": "permanent pacemaker Electrode",
+   "product_code": "DTB",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P140009",
+   "supplement": "S095",
+   "applicant": "ABBOTT MEDICAL",
+   "trade_name": "Family of DBS IPGs",
+   "generic_name": "Stimulator, electrical, implanted, for parkinsonian tremor",
+   "product_code": "MHY",
+   "decision_date": "2024-06-26",
+   "supplement_type": "Normal 180 Day Track",
+   "supplement_reason": "Change Design/Components/Specifications/Material",
+   "ao_statement": "Approval for:  Version 4.00 of the Patient Controller Application to be run on the Android OS that combines the two Patient Controller Applications approved in P010032/S187 (Patient Controller Application version 3.11) and P010032/S202 (Patient Controller Application version 2.00).  Predetermined Change Control Plan (PCCP) of the Patient Controller Application version 4.00 to be run on the Apple iOS."
+  },
+  {
+   "pma": "P980050",
+   "supplement": "S145",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "MEDTRONIC(R) JEWEL(R) AF 7250 DUAL CHAMBER IMPLANTABLE CARDIOVERTER DEFIBRILLATOR, MODEL 9961 PROGRAMMER APPLICATION SOF",
+   "generic_name": "Implantable cardioverter defibrillator (non-CRT)",
+   "product_code": "LWS",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P820003",
+   "supplement": "S144",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "trade_name": "Versatrax Model 7000 Universal A-V Pulse Generator",
+   "generic_name": "Implantable pulse generator, pacemaker (non-CRT)",
+   "product_code": "LWP",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P010031",
+   "supplement": "S884",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "trade_name": "Concerto/Insync Sentry/Insync Maximo Implantable Cardiovascular Defibrillators with Cardiac Resynchicnization",
+   "generic_name": "Defibrillator, automatic implantable cardioverter, with cardiac resynchronization (CRT-D)",
+   "product_code": "NIK",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P030031",
+   "supplement": "S143",
+   "applicant": "Biosense Webster, Inc.",
+   "trade_name": "VISITAG SURPOINT External Processing Unit (EPU); CARTO 3 System",
+   "generic_name": "catheter, percutaneous, cardiac ablation, for treatment of atrial flutter",
+   "product_code": "OAD",
+   "decision_date": "2026-06-30",
+   "supplement_type": "Normal 180 Day Track",
+   "supplement_reason": "Change Design/Components/Specifications/Material",
+   "ao_statement": "approval for the Connection Interface Unit (CIU) to be used with the TRUPULSE Generator, to introduce a predetermined change control plan (PCCP) (Predetermined Change Control Plan TRUPULSE Generator System Version 1.0) for planned hardware and software changes to the TRUPULSE Generator and related labeling updates"
+  },
+  {
+   "pma": "P850089",
+   "supplement": "S171",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "trade_name": "Capsure SP, Capsure, Capsure 2 Leads, Excellence S, Impulse, Impulse II Excellence SS, Leads",
+   "generic_name": "Drug eluting permanent right ventricular (RV) or right atrial (RA) pacemaker electrodes",
+   "product_code": "NVN",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P080006",
+   "supplement": "S190",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Medtronic Attain Ability Model 4196 Lead",
+   "generic_name": "Drug eluting permanent left ventricular (lv) pacemaker electrode",
+   "product_code": "OJX",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P060039",
+   "supplement": "S118",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Attain Starfix Model 4195 Lead",
+   "generic_name": "Drug eluting permanent left ventricular (lv) pacemaker electrode",
+   "product_code": "OJX",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P150033",
+   "supplement": "S201",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Medtronic Micra Transcatheter Pacemaker System",
+   "generic_name": "Leadless pacemaker",
+   "product_code": "PNJ",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P960030",
+   "supplement": "S084",
+   "applicant": "ABBOTT MEDICAL",
+   "trade_name": "UltiPace Low Voltage LPA1231, Tendril Low Voltage 2088TC, OptiSense Low Voltage 1999, Isoflex Low Voltage 1944/1948, Ten",
+   "generic_name": "Drug eluting permanent right ventricular (RV) or right atrial (RA) pacemaker electrodes",
+   "product_code": "NVN",
+   "decision_date": "2026-06-11",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses a the installation and validation of a semi-automated device packaging line and a cleanroom expansion of current ISO 7 cleanrooms into recently converted ISO 7 cleanrooms at Abbotts bradycardia lead manufacturing site. The supplement also requested approval for conversion of some ISO 8 cleanrooms into ISO 7 cleanrooms, which will subsequently be expanded as part of the PCCP."
+  },
+  {
+   "pma": "P950024",
+   "supplement": "S114",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Medtronic (R) CapSure (R) EPI Pacing Lead",
+   "generic_name": "Drug eluting permanent right ventricular (RV) or right atrial (RA) pacemaker electrodes",
+   "product_code": "NVN",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P220013",
+   "supplement": "S034",
+   "applicant": "ABBOTT MEDICAL",
+   "trade_name": "TactiFlex Ablation Catheter, Sensor Enabled",
+   "generic_name": "Catheter, percutaneous, cardiac ablation, for treatment of atrial fibrillation",
+   "product_code": "OAE",
+   "decision_date": "2026-09-22",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) TactiFlex Ablation Catheter, Sensor Enabled Predetermined Change Control Plan Version A that encompasses the change to the manufacturing location of the deflectable subassembly for subject catheter."
+  },
+  {
+   "pma": "P980035",
+   "supplement": "S807",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Medtronic Kappa 700/600 Series Pulse Generators and Model 9953 Software",
+   "generic_name": "Pulse generator, permanent, implantable",
+   "product_code": "NVZ",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P220012",
+   "supplement": "S043",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Aurora EV-ICD System",
+   "generic_name": "Implantable cardioverter defibrillator (non-CRT)",
+   "product_code": "LWS",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P930022",
+   "supplement": "S020",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Medtronic(R) Legend Plus(TM) Pulse Generator",
+   "generic_name": "Pulse generator, permanent, implantable",
+   "product_code": "NVZ",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P010015",
+   "supplement": "S558",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Medtronic Insync Biventrical Pacing System",
+   "generic_name": "Implantable pulse generator, pacemaker (non-CRT)",
+   "product_code": "LWP",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P960013",
+   "supplement": "S133",
+   "applicant": "ABBOTT MEDICAL",
+   "trade_name": "UltiPace Low Voltage LPA1231, Tendril Low Voltage 2088TC, OptiSense Low Voltage 1999, Isoflex Low Voltage 1944/1948, Ten",
+   "generic_name": "Drug eluting permanent right ventricular (RV) or right atrial (RA) pacemaker electrodes",
+   "product_code": "NVN",
+   "decision_date": "2026-06-11",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses a the installation and validation of a semi-automated device packaging line and a cleanroom expansion of current ISO 7 cleanrooms into recently converted ISO 7 cleanrooms at Abbotts bradycardia lead manufacturing site. The supplement also requested approval for conversion of some ISO 8 cleanrooms into ISO 7 cleanrooms, which will subsequently be expanded as part of the PCCP."
+  },
+  {
+   "pma": "P160007",
+   "supplement": "S058",
+   "applicant": "Medtronic Minimed",
+   "trade_name": "MiniMed Go app; Simplera sensor",
+   "generic_name": "Sensor, glucose, invasive",
+   "product_code": "MDS",
+   "decision_date": "2026-01-23",
+   "supplement_type": "Real-Time Process",
+   "supplement_reason": "Change Design/Components/Specifications/Material",
+   "ao_statement": "for a predetermined change control plan (PCCP) regarding alternate primary user interfaces and maintaining compatibility with alternate display devices."
+  },
+  {
+   "pma": "P850051",
+   "supplement": "S085",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Activitrax Models 8400, 8402, 8403",
+   "generic_name": "Pulse-generator, single chamber, sensor driven, implantable",
+   "product_code": "LWO",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P130022",
+   "supplement": "S069",
+   "applicant": "Nevro Corporation",
+   "trade_name": "HFX Dynamis System",
+   "generic_name": "Stimulator, spinal-cord, totally implanted for pain relief",
+   "product_code": "LGW",
+   "decision_date": "2026-08-18",
+   "supplement_type": "Normal 180 Day Track",
+   "supplement_reason": "Change Design/Components/Specifications/Material",
+   "ao_statement": "This supplement (S069) requested approval for the next generation implantable pulse generator system referred to as the HFX Dynamis System. The HFX Dynamis System is designed to deliver a new stimulation therapy, Bolus 10kHz, and support expanded MRI access to allow for scanning with one broken conductor per percutaneous lead. The key changes approved in this supplement include: a new Implantable Pulse Generator model (IPG3500), an updated Patient Application (PTA10043, v3.0.0), and updated Clinician Programmer Software (v4.0). The device, as modified, will be marketed under the trade name HFX Dynamis System and is indicated as follows:The HFX Dynamis System, HFX iQ System and HFX Trial System are indicated as aids in the management of chronic intractable pain of the trunk and/or limbs, including unilateral or bilateral pain associated with the following: failed back surgery syndrome, intractable low back pain, and leg pain. The HFX Dynamis System, HFX iQ System and HFX Trial System, when programmed to include a frequency of 10 kHz, are indicated as aids in the management of chronic intractable pain of the lower limbs, including unilateral or bilateral pain, associated with diabetic neuropathy. The HFX Dynamis System, HFX iQ System and HFX Trial System, when programmed to include a frequency of 10 kHz, are indicated as aids in the management of non-surgical refractory back pain (intractable back pain without prior surgery and not a candidate for back surgery). FDA's review of this PMA supplement also included the review and approval of a PCCP: Juno Predetermined Change Control Plan, Rev A., which includes two future firmware modifications: 1. Disabling the 1 MHz ASIC clock while in MRI Mode for the IPG3000 and IPG3500, to reduce RF artifacts in MRI images; and 2. Optimizing power consumption for bolus therapy programs by disabling the ASIC during the bolus Macro Off Time, applicable to the IPG3500 only."
+  },
+  {
+   "pma": "P900061",
+   "supplement": "S175",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "trade_name": "Medtronic PCD Tachyarrhythmia Control System",
+   "generic_name": "Implantable cardioverter defibrillator (non-CRT)",
+   "product_code": "LWS",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P990064",
+   "supplement": "S096",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Mosaic Bioprosthesis",
+   "generic_name": "replacement Heart-valve",
+   "product_code": "DYE",
+   "decision_date": "2026-02-12",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a Pre-Determined Change Control Plan (PCCP) that establishes a standardized qualification process for new bovine and porcine tissue suppliers, provided they do not impact the tissue's specifications, the established methods for its sourcing, handling, and testing, or the qualification standards for supplier facilities and personnel for the devices under the above PMAs"
+  },
+  {
+   "pma": "P210011",
+   "supplement": "S002",
+   "applicant": "Tempus AI, Inc.",
+   "trade_name": "xT CDx",
+   "generic_name": "Next generation sequencing oncology panel, somatic or germline variant detection system",
+   "product_code": "PQP",
+   "decision_date": "2026-09-02",
+   "supplement_type": "Normal 180 Day Track",
+   "supplement_reason": "Change Design/Components/Specifications/Material",
+   "ao_statement": "Approval for a Pre-specified Change Control Plan (PCCP) to modify the use of the device at a single laboratory to multiple laboratories"
+  },
+  {
+   "pma": "P160035",
+   "supplement": "S052",
+   "applicant": "Berlin Heart, Inc.",
+   "trade_name": "EXCOR Pediatric Ventricular Assist Device",
+   "generic_name": "Ventricular (assist) bypass",
+   "product_code": "DSQ",
+   "decision_date": "2025-07-24",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "Approval for a predetermined change control plan (PCCP) that encompasses a change to introduce a new membrane model used in the compressors of the IKUS driving unit."
+  },
+  {
+   "pma": "P970031",
+   "supplement": "S078",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Freestyle Bioprosthesis",
+   "generic_name": "heart-valve, non-allograft tissue",
+   "product_code": "LWR",
+   "decision_date": "2026-02-12",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a Pre-Determined Change Control Plan (PCCP) that establishes a standardized qualification process for new bovine and porcine tissue suppliers, provided they do not impact the tissue's specifications, the established methods for its sourcing, handling, and testing, or the qualification standards for supplier facilities and personnel for the devices under the above PMAs"
+  },
+  {
+   "pma": "P930039",
+   "supplement": "S270",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "MEDTRONIC(R) CAPSUREFIX LEAD MODEL 4068,4067,4568",
+   "generic_name": "Drug eluting permanent right ventricular (RV) or right atrial (RA) pacemaker electrodes",
+   "product_code": "NVN",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P970012",
+   "supplement": "S101",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Medtronic.Kappa 400 Series Pacemakers",
+   "generic_name": "Pulse generator, permanent, implantable",
+   "product_code": "NVZ",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P090013",
+   "supplement": "S336",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Revo MRI Surescan IPG and Pacing System",
+   "generic_name": "Implantable pulse generator, pacemaker (non-CRT)",
+   "product_code": "LWP",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  },
+  {
+   "pma": "P150004",
+   "supplement": "S071",
+   "applicant": "ABBOTT MEDICAL",
+   "trade_name": "Family of DRG IPGs",
+   "generic_name": "Dorsal root ganglion stimulator for pain relief",
+   "product_code": "PMP",
+   "decision_date": "2024-06-26",
+   "supplement_type": "Normal 180 Day Track",
+   "supplement_reason": "Change Design/Components/Specifications/Material",
+   "ao_statement": "Approval for:  Version 4.00 of the Patient Controller Application to be run on the Android OS that combines the two Patient Controller Applications approved in P010032/S187 (Patient Controller Application version 3.11) and P010032/S202 (Patient Controller Application version 2.00).  Predetermined Change Control Plan (PCCP) of the Patient Controller Application version 4.00 to be run on the Apple iOS."
+  },
+  {
+   "pma": "P980043",
+   "supplement": "S086",
+   "applicant": "Medtronic, Inc.",
+   "trade_name": "Hancock II Bioprosthesis",
+   "generic_name": "replacement Heart-valve",
+   "product_code": "DYE",
+   "decision_date": "2026-02-12",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a Pre-Determined Change Control Plan (PCCP) that establishes a standardized qualification process for new bovine and porcine tissue suppliers, provided they do not impact the tissue's specifications, the established methods for its sourcing, handling, and testing, or the qualification standards for supplier facilities and personnel for the devices under the above PMAs"
+  },
+  {
+   "pma": "P240006",
+   "supplement": "S016",
+   "applicant": "Biosense Webster, Inc.",
+   "trade_name": "VARIPULSE Catheter, TRUPULSE Generator with Connection Interface Unit (CIU)",
+   "generic_name": "Percutaneous Cardiac Ablation Catheter for Treatment of Atrial Fibrillation with Irreversible Electroporation",
+   "product_code": "QZI",
+   "decision_date": "2026-06-30",
+   "supplement_type": "Normal 180 Day Track",
+   "supplement_reason": "Change Design/Components/Specifications/Material",
+   "ao_statement": "approval for the Connection Interface Unit (CIU) to be used with the TRUPULSE Generator, to introduce a predetermined change control plan (PCCP) (Predetermined Change Control Plan TRUPULSE Generator System Version 1.0) for planned hardware and software changes to the TRUPULSE Generator and related labeling updates"
+  },
+  {
+   "pma": "P010032",
+   "supplement": "S213",
+   "applicant": "ABBOTT MEDICAL",
+   "trade_name": "Family of SCS IPGs",
+   "generic_name": "Stimulator, spinal-cord, totally implanted for pain relief",
+   "product_code": "LGW",
+   "decision_date": "2024-06-26",
+   "supplement_type": "Normal 180 Day Track",
+   "supplement_reason": "Change Design/Components/Specifications/Material",
+   "ao_statement": "Approval for:  Version 4.00 of the Patient Controller Application to be run on the Android OS that combines the two Patient Controller Applications approved in P010032/S187 (Patient Controller Application version 3.11) and P010032/S202 (Patient Controller Application version 2.00).  Predetermined Change Control Plan (PCCP) of the Patient Controller Application version 4.00 to be run on the Apple iOS."
+  },
+  {
+   "pma": "P830061",
+   "supplement": "S230",
+   "applicant": "Medtronic Cardiac Rhythm Disease Management",
+   "trade_name": "Steroid TIP(TM) Model 4503 & 4003 Transvenous Pacing",
+   "generic_name": "Drug eluting permanent right ventricular (RV) or right atrial (RA) pacemaker electrodes",
+   "product_code": "NVN",
+   "decision_date": "2025-03-20",
+   "supplement_type": "135 Review Track For 30-Day Notice",
+   "supplement_reason": "Process Change - Manufacturer/Sterilizer/Packager/Supplier",
+   "ao_statement": "approval for a predetermined change control plan (PCCP) that encompasses the following biocompatibility-related manufacturing changes, provided that they do not impact the properties of the device materials, for the devices under the above PMAs:1. Removal of a processing aid (solvent, lubricant, antifoaming agent, etc.), or cleaning agent2. Removal of a cleaning process3. Change in parameters (temperature, time, sonication, etc.) of a current cleaning process"
+  }
+ ]
+}
