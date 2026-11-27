@@ -1,0 +1,31 @@
+{
+ "sigstore_version": "3.6.5",
+ "verdict": "SIGSTORE_OFFICIAL_VERIFY_OK",
+ "positive": {
+  "merkle_inclusion": {
+   "ok": true,
+   "ms": 0.3
+  },
+  "checkpoint": {
+   "ok": true,
+   "ms": 15.9
+  },
+  "set(签名条目时间戳)": {
+   "ok": true,
+   "ms": 2.5
+  },
+  "full(_verify)": {
+   "ok": true,
+   "ms": 1.1
+  }
+ },
+ "negative": {
+  "root_hash_flip": "rejected (VerificationError)",
+  "set_flip": "rejected (VerificationError)"
+ },
+ "log_index_record": 4145697630,
+ "log_index_proof": 4023793368,
+ "tree_size": 4023793372,
+ "root_hash": "8533948bb1266c3b6b98f6374f79d338c2c84811da3b69c6b3bc49414a4626c1",
+ "hashes": 22
+}

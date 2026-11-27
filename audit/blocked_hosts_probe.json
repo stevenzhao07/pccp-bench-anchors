@@ -1,0 +1,161 @@
+[
+ {
+  "host": "huggingface.co",
+  "dns": {
+   "ok": true,
+   "ips": [
+    "2a03:2880:f10d:183:face:b00c:0:25de",
+    "98.159.108.61"
+   ],
+   "ms": 22
+  },
+  "tcp": {
+   "ok": false,
+   "err": "TimeoutError: timed out",
+   "ms": 16016
+  },
+  "tls": {
+   "ok": false,
+   "err": "TimeoutError: timed out",
+   "ms": 16034
+  },
+  "http": null,
+  "verdict": "TCP_BLOCKED"
+ },
+ {
+  "host": "hf.co",
+  "dns": {
+   "ok": true,
+   "ips": [
+    "18.213.84.241",
+    "3.210.66.237",
+    "34.198.14.237",
+    "34.202.8.246"
+   ],
+   "ms": 8
+  },
+  "tcp": {
+   "ok": true,
+   "peer": "('3.210.66.237', 443)",
+   "ms": 271
+  },
+  "tls": {
+   "ok": true,
+   "subject": "((('commonName', 'hf.co'),),)",
+   "issuer": "((('countryName', 'US'),), (('organizationName', 'Amazon'),), (('commonName', 'Amazon RSA 2048 M01'),))",
+   "ms": 565
+  },
+  "http": {
+   "err": "ConnectTimeout: timed out",
+   "ms": 21196
+  },
+  "verdict": "HTTP_FAIL"
+ },
+ {
+  "host": "cdn-lfs.huggingface.co",
+  "dns": {
+   "ok": true,
+   "ips": [
+    "103.214.168.106",
+    "2a03:2880:f136:83:face:b00c:0:25de"
+   ],
+   "ms": 6
+  },
+  "tcp": {
+   "ok": false,
+   "err": "TimeoutError: timed out",
+   "ms": 16020
+  },
+  "tls": {
+   "ok": false,
+   "err": "TimeoutError: timed out",
+   "ms": 16025
+  },
+  "http": null,
+  "verdict": "TCP_BLOCKED"
+ },
+ {
+  "host": "cdn-lfs-us-1.hf.co",
+  "dns": {
+   "ok": true,
+   "ips": [
+    "18.65.214.18",
+    "18.65.214.52",
+    "18.65.214.55",
+    "18.65.214.91"
+   ],
+   "ms": 120
+  },
+  "tcp": {
+   "ok": true,
+   "peer": "('18.65.214.52', 443)",
+   "ms": 64
+  },
+  "tls": {
+   "ok": true,
+   "subject": "((('commonName', 'hf.co'),),)",
+   "issuer": "((('countryName', 'US'),), (('organizationName', 'Amazon'),), (('commonName', 'Amazon RSA 2048 M01'),))",
+   "ms": 150
+  },
+  "http": null,
+  "verdict": "TCP+TLS_OK"
+ },
+ {
+  "host": "zenodo.org",
+  "dns": {
+   "ok": true,
+   "ips": [
+    "137.138.121.78",
+    "188.185.40.132",
+    "188.185.42.113",
+    "188.185.45.63"
+   ],
+   "ms": 8
+  },
+  "tcp": {
+   "ok": true,
+   "peer": "('2001:1458:d00:61::100:8d', 443, 0, 0)",
+   "ms": 218
+  },
+  "tls": {
+   "ok": true,
+   "subject": "((('commonName', 'zenodo.org'),),)",
+   "issuer": "((('countryName', 'US'),), (('organizationName', \"Let's Encrypt\"),), (('commonName', 'YR2'),))",
+   "ms": 465
+  },
+  "http": {
+   "status": 200,
+   "ms": 2609
+  },
+  "verdict": "HTTP_200"
+ },
+ {
+  "host": "sandbox.zenodo.org",
+  "dns": {
+   "ok": true,
+   "ips": [
+    "188.185.42.119",
+    "188.185.46.121",
+    "188.185.48.40",
+    "2001:1458:d00:24::100:281"
+   ],
+   "ms": 7
+  },
+  "tcp": {
+   "ok": true,
+   "peer": "('2001:1458:d00:61::100:103', 443, 0, 0)",
+   "ms": 279
+  },
+  "tls": {
+   "ok": true,
+   "subject": "((('commonName', 'sandbox.zenodo.org'),),)",
+   "issuer": "((('countryName', 'US'),), (('organizationName', \"Let's Encrypt\"),), (('commonName', 'YR1'),))",
+   "ms": 559
+  },
+  "http": {
+   "status": 200,
+   "ms": 954
+  },
+  "verdict": "HTTP_200"
+ }
+]

@@ -1,0 +1,6 @@
+{
+ "ours_merkle_ms": 0.194,
+ "ours_checkpoint_ms": 97.7,
+ "sigstore_merkle_ms": 0.3,
+ "sigstore_checkpoint_ms": 15.9
+}

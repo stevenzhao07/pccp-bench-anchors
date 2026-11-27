@@ -1,0 +1,76 @@
+{
+ "ours": {
+  "verify_rekor_inclusion.py": {
+   "lines": 87,
+   "code_lines": 68,
+   "third_party": []
+  },
+  "verify_set.py": {
+   "lines": 92,
+   "code_lines": 75,
+   "third_party": []
+  },
+  "verify_anchor.py": {
+   "lines": 221,
+   "code_lines": 184,
+   "third_party": [],
+   "runtime_ms_incl_startup": 347.8,
+   "exit": 0,
+   "tail": [
+    "",
+    "ANCHOR_VERIFIED"
+   ]
+  },
+  "verify_zero_dep.py": {
+   "lines": 309,
+   "code_lines": 252,
+   "third_party": []
+  }
+ },
+ "sigstore": {
+  "direct_requires": 15,
+  "transitive_dists_installed": 37,
+  "dists": [
+   "annotated-types",
+   "betterproto",
+   "certifi",
+   "cffi",
+   "charset-normalizer",
+   "cryptography",
+   "grpclib",
+   "h2",
+   "hpack",
+   "hyperframe",
+   "id",
+   "idna",
+   "markdown-it-py",
+   "mdurl",
+   "multidict",
+   "platformdirs",
+   "pyasn1",
+   "pycparser",
+   "pydantic",
+   "pydantic-core",
+   "pygments",
+   "pyjwt",
+   "pyopenssl",
+   "python-dateutil",
+   "requests",
+   "rfc3161-client",
+   "rfc8785",
+   "rich",
+   "securesystemslib",
+   "sigstore",
+   "sigstore-protobuf-specs",
+   "sigstore-rekor-types",
+   "six",
+   "tuf",
+   "typing-extensions",
+   "typing-inspection",
+   "urllib3"
+  ],
+  "disk_mb": 53.8,
+  "runtime_ms_full_verify": 1.1,
+  "verdict": "SIGSTORE_OFFICIAL_VERIFY_OK"
+ }
+}
