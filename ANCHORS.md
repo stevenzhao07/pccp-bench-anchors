@@ -75,3 +75,39 @@ A-0000（自生成密钥，uuid `108e9186…e16285`）与 A-0002（工作流身�
 | 写入方式 | `POST /api/v1/log/entries` → 201（hashedrekord，自签密钥） |
 | 校验（事后复算） | 包含性 OK / checkpoint OK / SET OK / 绑定 OK |
 | **没有的东西** | 公钥无身份绑定 → **不证明"是谁写的"** |
+
+## A-0003 · 2026-11-27（v0.3 候选包）
+
+| 项 | 值 |
+|---|---|
+| 产物 | `dist/pccp-bench_v0.3_candidate.zip`（拆标志 + 11 字词表 + 包内 v0.3 适配器；判器字节未改） |
+| 字节数 | 69,421 B |
+| sha256 | `d684eaca7b2ba32483c23a1474815bf0314dd2cdf8770648eb7b6e2c1826ed99` |
+| 签名身份（SAN URI） | `https://github.com/stevenzhao07/pccp-bench-anchors/.github/workflows/keyless-anchor.yml@refs/heads/main` |
+| OIDC issuer | `https://token.actions.githubusercontent.com` |
+| 工作流运行 | run 45956271779（workflow_dispatch，commit `7f4f4148`，artifacts id 15179071601） |
+| Rekor 条目 uuid | `108e9186e8c5677af6e6345f2d538805c61ef77b81a04c74990026eef923431269f4fee8e08258a4` |
+| Rekor logIndex | 4143787841（integratedTime 1795763247） |
+| 包含性证明 | treeSize 4,021,883,613 / proof.logIndex 4,021,883,579 → **OK**（depth 26） |
+| checkpoint 签名 | **OK**（body+LF） |
+| SET 签名 | **OK**（sorted-compact） |
+| 证书链 | leaf←intermediate←root 全 **OK**（零第三方依赖工具验出） |
+| 绑定 | bundle digest == 条目 hashedrekord digest == 产物 sha256 → **OK** |
+| 身份匹配 | issuer + SAN URI 双项匹配 → **OK** |
+
+验算（零依赖，只需 Python 3.9+）：
+
+```bash
+curl -sSL 'https://raw.githubusercontent.com/stevenzhao07/pccp-bench-anchors/main/tools/verify_zero_dep.py' -o vz.py
+curl -s 'https://rekor.sigstore.dev/api/v1/log/entries?logIndex=4143787841' -o entry.json
+python vz.py --entry entry.json --rekor-key rekor_publicKey.json \
+  --intermediate certs/fulcio_intermediate.pem --root certs/fulcio_root.pem
+# 期望 ZERO_DEP_ALL_PASS
+```
+
+## 口径（A-0003 新增）
+
+- A-0003 锚的是**候选包**字节，不等于"已发布数据集"：hidden 承诺未换、Zenodo 未更新、README 未改口径。
+- 包内 51 条公开题得分 51/51 是**作者把标签与判器对齐后的天花板**，不是独立验证；
+  同一批题由外部模型（未给标签）盲判 50/51，唯一分歧 `P240006` 因 `change_type` 缺字段。
+- 判器字节（`snapshot/judge_pccp.py`）与 A-0001/A-0002 时期完全相同，一字未改。

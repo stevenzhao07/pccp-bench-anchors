@@ -1,0 +1,308 @@
+[
+ {
+  "case_id": "DEN250057-M1-RETRAIN",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K260973-H1-DICE-MISS",
+  "verdict": "reject",
+  "tag": "acceptance_not_met",
+  "why": "Dice below target"
+ },
+ {
+  "case_id": "K260973-M1-TRAIN-DATA",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K260973-N1-UNDESCRIBED-ORGAN",
+  "verdict": "hold",
+  "tag": "outside_scope",
+  "why": "Undescribed anatomical region"
+ },
+ {
+  "case_id": "P240006-HW-COVERAGE-GAP",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K260217-EXTEND-ABDOMEN",
+  "verdict": "hold",
+  "tag": "outside_scope",
+  "why": "New 510(k) required"
+ },
+ {
+  "case_id": "K253281-C1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met"
+ },
+ {
+  "case_id": "K253281-C2",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met"
+ },
+ {
+  "case_id": "K253281-C5",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met"
+ },
+ {
+  "case_id": "K254123-M1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met"
+ },
+ {
+  "case_id": "K254123-M2",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met"
+ },
+ {
+  "case_id": "K254123-M3",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met"
+ },
+ {
+  "case_id": "K254297-M1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met within scope"
+ },
+ {
+  "case_id": "K254297-M2",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met within scope"
+ },
+ {
+  "case_id": "K260217-M-submitted",
+  "verdict": "hold",
+  "tag": "outside_scope",
+  "why": "change outside authorized scope"
+ },
+ {
+  "case_id": "K260597-M1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met within scope"
+ },
+ {
+  "case_id": "K260597-M2",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met within scope"
+ },
+ {
+  "case_id": "K260619-M1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met within scope"
+ },
+ {
+  "case_id": "K260811-M1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K260906-P1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K260906-P6",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K260906-P7",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K260906-P8",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K261517-M1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K261623-M1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K261623-M2",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K261623-M3",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K261896-1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K261896-2",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K261896-3",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K261962-M1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "K263035-M1",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "All criteria met within scope"
+ },
+ {
+  "case_id": "SYN-IU-PEDIATRIC-EXPAND",
+  "verdict": "reject",
+  "tag": "intended_use_change",
+  "why": "Intended use changed"
+ },
+ {
+  "case_id": "SYN-IU-NEW-CLINICAL-CLAIM",
+  "verdict": "reject",
+  "tag": "intended_use_change",
+  "why": "Intended use changed"
+ },
+ {
+  "case_id": "SYN-NO-PCCP-ROADMAP",
+  "verdict": "reject",
+  "tag": "outside_scope",
+  "why": "No authorized PCCP exists"
+ },
+ {
+  "case_id": "SYN-NO-PCCP-SITE-CHANGE",
+  "verdict": "hold",
+  "tag": "outside_scope",
+  "why": "Change not in PCCP scope"
+ },
+ {
+  "case_id": "SYN-SE-NOT-MAINTAINED-HW",
+  "verdict": "reject",
+  "tag": "acceptance_not_met",
+  "why": "acceptance criteria not met"
+ },
+ {
+  "case_id": "SYN-SE-PREDICATE-DELISTED",
+  "verdict": "reject",
+  "tag": "intended_use_change",
+  "why": "substantial equivalence broken"
+ },
+ {
+  "case_id": "SYN-VAL-MASKED-SPLIT-MISSING",
+  "verdict": "hold",
+  "tag": "evidence_missing",
+  "why": "validation not documented"
+ },
+ {
+  "case_id": "SYN-VAL-SUBGROUP-OMITTED",
+  "verdict": "hold",
+  "tag": "evidence_missing",
+  "why": "subgroup data incomplete"
+ },
+ {
+  "case_id": "SYN-LVH-NOT-VERSIONED",
+  "verdict": "hold",
+  "tag": "evidence_missing",
+  "why": "labeling not updated"
+ },
+ {
+  "case_id": "SYN-LVH-USER-NOTICE-MISSING",
+  "verdict": "hold",
+  "tag": "evidence_missing",
+  "why": "user notice delayed"
+ },
+ {
+  "case_id": "SYN-UDI-NOT-UPDATED",
+  "verdict": "hold",
+  "tag": "evidence_missing",
+  "why": "UDI not updated"
+ },
+ {
+  "case_id": "SYN-AC-CI-LOWER-BOUND",
+  "verdict": "reject",
+  "tag": "acceptance_not_met",
+  "why": "CI lower bound missed"
+ },
+ {
+  "case_id": "SYN-CLASS-ENSEMBLE-UNDESCRIBED",
+  "verdict": "hold",
+  "tag": "evidence_missing",
+  "why": "change class undescribed"
+ },
+ {
+  "case_id": "SYN-SCOPE-BORDERLINE-REGION",
+  "verdict": "hold",
+  "tag": "outside_scope",
+  "why": "region not listed"
+ },
+ {
+  "case_id": "SYN-SUPPLIER-SECOND-SOURCE-OUT",
+  "verdict": "hold",
+  "tag": "outside_scope",
+  "why": "component not named"
+ },
+ {
+  "case_id": "SYN-SCOPE-CLEANROOM-NOT-LISTED",
+  "verdict": "hold",
+  "tag": "outside_scope",
+  "why": "change not in PCCP"
+ },
+ {
+  "case_id": "SYN-EVIDENCE-REAL-WORLD-ONLY",
+  "verdict": "hold",
+  "tag": "evidence_missing",
+  "why": "missing controlled holdout evaluation"
+ },
+ {
+  "case_id": "SYN-GO-WITH-ALL-FLAGS-EXERCISED",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met and documented"
+ },
+ {
+  "case_id": "SYN-GO-PROCESS-NEGATIVE-PREMISE",
+  "verdict": "go",
+  "tag": "ok_covered",
+  "why": "all criteria met and documented"
+ }
+]
