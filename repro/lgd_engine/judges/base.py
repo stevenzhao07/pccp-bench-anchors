@@ -72,23 +72,33 @@ class DomainJudge(Protocol):
 #   _CONTRACT["when"] = lambda c: bool(is_unusable(c, REQUIRED_FIELDS) or misused(c, BOOL_FIELDS))
 # 语义取"台账口径"：必填缺失/为空 → unusable；布尔字段给了非布尔值 → misused。
 # 复用前必须知道：这两个函数的原始实现未公开，本重建不保证与作者版逐字一致。
+#
+# 2026-11-27 更正（第二十二轮）：初版重建返回 True/False，但判器在两条分支上都写
+#   ", ".join(missing) —— 它期待的是**字段名列表**。于是只要有一条记录缺必填、
+#   判器就在 detail 拼装处抛 TypeError 崩掉，而不是按设计返回 hold / reject。
+#   完整记录不触发该分支，所以 31/32、50/51 两个分数都看不出这个错。
+#   现改为返回违规字段名列表（空列表为假值，调用点的 bool() 语义不变）。
 
 def is_unusable(ctx, required_fields):
-    """Required fields missing or empty -> the record cannot be judged."""
+    """Required fields missing or empty -> return the offending field names."""
+    bad = []
     for k, t in required_fields.items():
         if k not in ctx or ctx[k] is None:
-            return True
+            bad.append(k)
+            continue
         v = ctx[k]
         if isinstance(v, str) and not v.strip():
-            return True
+            bad.append(k)
+            continue
         if t is str and not isinstance(v, str):
-            return True
-    return False
+            bad.append(k)
+    return bad
 
 
 def misused(ctx, bool_fields):
     """A field that should be a boolean carries something else (e.g. "true")."""
+    bad = []
     for k in bool_fields:
         if k in ctx and ctx[k] is not None and not isinstance(ctx[k], bool):
-            return True
-    return False
+            bad.append(k)
+    return bad
