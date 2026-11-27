@@ -1,0 +1,95 @@
+{
+ "anchors_known": [
+  {
+   "id": "A-0000",
+   "what": "回执演示 4 条",
+   "sha256": null,
+   "logIndex": 4140703205
+  },
+  {
+   "id": "A-0001",
+   "what": "v0.1 包",
+   "sha256": "1907e93a21305c3055777dda2f3c85f037501d821bba08abb37f7ac8127aaf61",
+   "logIndex": 4141390895
+  },
+  {
+   "id": "A-0002",
+   "what": "规范化回执字节",
+   "sha256": "b19fd9d6dc473fee5f069449ef71541f28be9d455074336bb85db4db7fd349bd",
+   "logIndex": 4142064557
+  },
+  {
+   "id": "A-0003",
+   "what": "v0.3 包",
+   "sha256": "d684eaca7b2ba32483c23a1474815bf0314dd2cdf8770648eb7b6e2c1826ed99",
+   "logIndex": 4143787841
+  }
+ ],
+ "packages": [
+  {
+   "file": "pccp-bench_v0.3.1_candidate.zip",
+   "bytes": 73854,
+   "sha256": "160ac6fcf2c7939c410948c322efc898c6dc9587091dbdf371b3daea8d80d6e4",
+   "has_snapshot_base": true,
+   "has_selfcheck": true,
+   "manifest_version": "0.3.1",
+   "engine_sha256": "7ee356eacef9ebb5b7fca51a4317424e5220453f30aa32f6d08fb9a54659e3dd",
+   "manifest_leaf_count": 21,
+   "cases": 51,
+   "copies": [
+    "pccp-bench_v0.3.1_candidate.zip"
+   ],
+   "anchored": null,
+   "selfcheck": "PASS 51/51"
+  },
+  {
+   "file": "pccp-bench_v0.3.2_candidate.zip",
+   "bytes": 74649,
+   "sha256": "5a24b20b9c425832a650cdfb968449cfc8a0004bc49e686352bc59d9840ce4a9",
+   "has_snapshot_base": true,
+   "has_selfcheck": true,
+   "manifest_version": "0.3.2",
+   "engine_sha256": "7ee356eacef9ebb5b7fca51a4317424e5220453f30aa32f6d08fb9a54659e3dd",
+   "manifest_leaf_count": 21,
+   "cases": 51,
+   "copies": [
+    "pccp-bench_v0.3.2_candidate.zip"
+   ],
+   "anchored": null,
+   "selfcheck": "PASS 51/51"
+  },
+  {
+   "file": "pccp-bench_v0.3_candidate.zip",
+   "bytes": 69421,
+   "sha256": "d684eaca7b2ba32483c23a1474815bf0314dd2cdf8770648eb7b6e2c1826ed99",
+   "has_snapshot_base": false,
+   "has_selfcheck": false,
+   "manifest_version": "0.1.0",
+   "engine_sha256": "7ee356eacef9ebb5b7fca51a4317424e5220453f30aa32f6d08fb9a54659e3dd",
+   "manifest_leaf_count": 14,
+   "cases": 51,
+   "copies": [
+    "pccp-bench_v0.3_candidate.zip",
+    "pcp_bench_v0_3_candidate.zip"
+   ],
+   "anchored": "A-0003",
+   "selfcheck": "NO_SELFCHECK"
+  },
+  {
+   "file": "pccp_bench_v010.zip",
+   "bytes": 60505,
+   "sha256": "1907e93a21305c3055777dda2f3c85f037501d821bba08abb37f7ac8127aaf61",
+   "has_snapshot_base": false,
+   "has_selfcheck": false,
+   "manifest_version": "0.1.0",
+   "engine_sha256": "7ee356eacef9ebb5b7fca51a4317424e5220453f30aa32f6d08fb9a54659e3dd",
+   "manifest_leaf_count": 14,
+   "cases": 32,
+   "copies": [
+    "pccp_bench_v010.zip"
+   ],
+   "anchored": "A-0001",
+   "selfcheck": "NO_SELFCHECK"
+  }
+ ]
+}
