@@ -1,0 +1,150 @@
+{
+ "cases": [
+  {
+   "case_id": "SYN-NO-PCCP-ROADMAP",
+   "device_description": "A locked AI device cleared through 510(k) with no authorized predetermined change control plan. The manufacturer maintains an internal product roadmap that lists 'quarterly model refresh with the same architecture, same input, same output, and acceptance criteria of non-inferiority on a 500-case holdout'. The proposed refresh satisfies every element of that roadmap, and the holdout run shows no regression on the primary metric and no subgroup degradation. The manufacturer argues that the roadmap is functionally a PCCP because it pre-specifies changes, methodology, and acceptance criteria, and that the refresh therefore does not require a new submission.",
+   "pccp_authorized": false,
+   "change_within_pccp_scope": false,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "retrain_same_distribution",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {
+     "kind": "statute",
+     "ref": "FD&C Act 515C: the modification-without-submission shield applies only to a modification implemented consistent with an authorized PCCP"
+    },
+    {
+     "kind": "guidance",
+     "ref": "FDA PCCP guidance: a PCCP is reviewed as part of a marketing submission, not as an internal document"
+    }
+   ],
+   "expected_verdict": "reject",
+   "kind": "boundary",
+   "expected_tag": "outside_scope",
+   "label_provenance": "synthetic_v0.2+rule_r1_20261127",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / internal roadmap mistaken for authorized PCCP",
+    "built_because": "v0.1 中 pccp_authorized 32/32 全为 True，这条标志等于没考"
+   },
+   "claimed_pccp_coverage": true,
+   "actually_within_scope": false
+  },
+  {
+   "case_id": "SYN-EVIDENCE-REAL-WORLD-ONLY",
+   "device_description": "A device whose PCCP acceptance criteria require a controlled holdout evaluation for each implemented modification. This cycle relies on 14 months of real-world performance data collected under a documented data-integrity control, showing no change in the primary metric and no subgroup drift, and reports no controlled holdout run because the holdout set was consumed by last cycle's evaluation. The manufacturer points out that regulators have been asked to accept real-world re-benchmarking evidence generated under controlled release processes.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": false,
+   "remains_se_to_predicate": true,
+   "validation_documented": false,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "retrain_same_distribution",
+   "evidence_sufficiency": "needs_supplement",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {
+     "kind": "industry",
+     "ref": "Ketryx 2026-10-19 对 FDA 的评论：请求接受厂商受控发布流程生成的自动化 re-benchmark 证据（截至 2026-11 仅为提议）"
+    },
+    {
+     "kind": "guidance",
+     "ref": "FDA PCCP guidance: the acceptance criteria named in the PCCP govern the evidence required"
+    }
+   ],
+   "expected_verdict": "hold",
+   "kind": "boundary",
+   "expected_tag": "acceptance_not_met",
+   "label_provenance": "synthetic_v0.2+rule_r1_20261127",
+   "facts_provenance": "synthetic_design",
+   "source": {
+    "case_kind": "negative control / industry proposal used as current rule",
+    "built_because": "把'有人在请求'当成'已经生效'"
+   },
+   "criteria_measured": false,
+   "criteria_met": null
+  },
+  {
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "change_type": "add_new_modality",
+   "case_id": "K260217-M-submitted",
+   "kind": "described",
+   "device_description": "Exo AI Platform 2.2（超声 Quality AI 扩展腹部切面）：本次提交：Quality AI 扩展支持上腹部与盆腔两个腹部切面（属新 510(k)，不是 PCCP 内修改）",
+   "expected_verdict": "hold",
+   "expected_tag": "ok_covered",
+   "label_provenance": "fda_authorized_table",
+   "facts_provenance": "author_reconstructed",
+   "source_refs": [
+    {
+     "kind": "fda_summary",
+     "ref": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260217.pdf"
+    },
+    {
+     "kind": "pccp_table",
+     "ref": "K260217 Description of the Modification：'The predicate device (AI Platform 2.0, K240953) includes a Predetermined Change Control Plan (PCCP). The device continues to contain this PCCP; however, the subject modifications described in this submission are outside the scope of the PCCP.' M-submitted"
+    }
+   ],
+   "source": {
+    "doc": "K260217",
+    "anchor": "Description of the Modification：'The predicate device (AI Platform 2.0, K240953) includes a Predetermined Change Control Plan (PCCP). The device continues to contain this PCCP; however, the subject modifications described in this submission are outside the scope of the PCCP.'",
+    "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260217.pdf",
+    "rationale": "",
+    "adaptive": false
+   },
+   "actually_within_scope": false
+  },
+  {
+   "case_id": "P240006-HW-COVERAGE-GAP",
+   "device_description": "PMA-approved generator with a PCCP for planned hardware and software changes plus labeling updates.",
+   "pccp_authorized": true,
+   "change_within_pccp_scope": true,
+   "affects_intended_use": false,
+   "change_class_described": true,
+   "acceptance_criteria_met": true,
+   "remains_se_to_predicate": true,
+   "validation_documented": true,
+   "labeling_version_history": true,
+   "udi_updated": true,
+   "change_type": "hardware_change",
+   "evidence_sufficiency": "sufficient",
+   "jurisdiction": "FDA",
+   "source_refs": [
+    {
+     "kind": "fda_pma_pccp",
+     "ref": "P240006/S016 approval order statement, fda.report/PMA/P240006"
+    }
+   ],
+   "expected_verdict": "hold",
+   "_expectation_note": "判定器的 change_type 枚举只有算法/软件/标签类，没有'硬件变更'。所以这里不是引擎判错，而是**覆盖缺口的实证**：给出 hold（P-MAJ-10 unknown-change-type）正是 fail-safe 的正确行为。要把这类真实 PCCP 纳入，得先在枚举与规则里建模硬件/机械/材料变更——属下一轮引擎改动，须你点头。",
+   "kind": "boundary",
+   "expected_tag": "unclassifiable",
+   "label_provenance": "author_argued",
+   "facts_provenance": "replay_from_document",
+   "source": {
+    "derived_from": "FDA P240006/S016 (Biosense Webster TRUPULSE Generator, PMA supplement approved 2026-06-30) PCCP covering planned HARDWARE and software changes",
+    "case_kind": "real_authorized_pccp / coverage-gap probe: the judge models algorithm/software change types only",
+    "adaptive": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "n": 51,
+ "regressions": 0,
+ "regression_detail": [],
+ "boundary": [
+  {
+   "case_id": "SYN-NO-PCCP-ROADMAP",
+   "expected": "reject",
+   "v03_verdict": "reject",
+   "v03_tag": "unclassifiable",
+   "match": true
+  },
+  {
+   "case_id": "SYN-EVIDENCE-REAL-WORLD-ONLY",
+   "expected": "hold",
+   "v03_verdict": "hold",
+   "v03_tag": "unclassifiable",
+   "match": true
+  },
+  {
+   "case_id": "K260217-M-submitted",
+   "expected": "hold",
+   "v03_verdict": "hold",
+   "v03_tag": "outside_scope",
+   "match": true
+  },
+  {
+   "case_id": "P240006-HW-COVERAGE-GAP",
+   "expected": "hold",
+   "v03_verdict": "hold",
+   "v03_tag": "unclassifiable",
+   "match": true
+  }
+ ]
+}
