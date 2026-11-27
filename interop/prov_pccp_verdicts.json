@@ -1,0 +1,67 @@
+{
+ "prefix": {
+  "pccp": "urn:pccp-bench:"
+ },
+ "activity": {
+  "pccp:run_v032": {
+   "prov:label": "judge run on 51 cases"
+  }
+ },
+ "entity": {
+  "pccp:pkg_v0_3_2": {
+   "pccp:sha256": "5a24b20b9c42"
+  },
+  "pccp:verdicts_51": {
+   "pccp:go": {
+    "$": "30",
+    "type": "xsd:int"
+   },
+   "pccp:hold": {
+    "$": "14",
+    "type": "xsd:int"
+   },
+   "pccp:reject": {
+    "$": "7",
+    "type": "xsd:int"
+   }
+  },
+  "pccp:pkg_v0_3": {
+   "pccp:anchor": "rekor:logIndex=4143787841"
+  }
+ },
+ "agent": {
+  "pccp:steven": {
+   "prov:type": "prov:Person"
+  }
+ },
+ "used": {
+  "_:id1": {
+   "prov:activity": "pccp:run_v032",
+   "prov:entity": "pccp:pkg_v0_3_2"
+  }
+ },
+ "wasGeneratedBy": {
+  "_:id2": {
+   "prov:entity": "pccp:verdicts_51",
+   "prov:activity": "pccp:run_v032"
+  }
+ },
+ "wasAttributedTo": {
+  "_:id3": {
+   "prov:entity": "pccp:verdicts_51",
+   "prov:agent": "pccp:steven"
+  }
+ },
+ "wasAssociatedWith": {
+  "_:id4": {
+   "prov:activity": "pccp:run_v032",
+   "prov:agent": "pccp:steven"
+  }
+ },
+ "wasDerivedFrom": {
+  "_:id5": {
+   "prov:generatedEntity": "pccp:pkg_v0_3_2",
+   "prov:usedEntity": "pccp:pkg_v0_3"
+  }
+ }
+}

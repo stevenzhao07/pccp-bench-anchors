@@ -1,0 +1,40 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.3/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "datePublished": "2026-11-27T09:22:02+00:00",
+            "description": "T1 复核包：三个命令、14 格编码表、回传校验器；用途是让第三方在本机独立跑一遍，不表示已通过第三方实测",
+            "hasPart": [
+                {
+                    "@id": "pccp-t1-review-pack_20261127.zip"
+                }
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "name": "pccp-bench T1 review pack"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.3"
+            }
+        },
+        {
+            "@id": "#steven",
+            "@type": "Person",
+            "affiliation": "pccp-bench-anchors",
+            "name": "Steven Zhao"
+        },
+        {
+            "@id": "pccp-t1-review-pack_20261127.zip",
+            "@type": "File",
+            "name": "pccp-t1-review-pack_20261127.zip",
+            "sha256": "d1229781dede78b92198bd1116b1a9844494fd41ed71f80a5785524bc1840f5f"
+        }
+    ]
+}

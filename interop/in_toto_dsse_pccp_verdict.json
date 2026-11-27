@@ -1,0 +1,37 @@
+{
+ "statement": {
+  "_type": "https://in-toto.io/Statement/v1",
+  "subject": [
+   {
+    "name": "pccp-bench_v0.3.2_candidate.zip",
+    "digest": {
+     "sha256": "5a24b20b9c425832a650cdfb968449cfc8a0004bc49e686352bc59d9840ce4a9"
+    }
+   }
+  ],
+  "predicateType": "urn:pccp-bench:verdict:v1",
+  "predicate": {
+   "dataset": "pccp-bench v0.3.2-candidate",
+   "judge_sha256": "7ee356ea",
+   "cases_sha256": "94bb03a607dca08f50cdc3914d529a08fce5d759dd473d48fe58c020d6553df1",
+   "verdict_distribution": {
+    "go": 30,
+    "hold": 14,
+    "reject": 7
+   },
+   "score": "51/51 (same-author ceiling)",
+   "third_party_tested": 0,
+   "notes": "不表示内容正确；T1 = 0 件"
+  }
+ },
+ "dsse": {
+  "payload": "eyJfdHlwZSI6Imh0dHBzOi8vaW4tdG90by5pby9TdGF0ZW1lbnQvdjEiLCJwcmVkaWNhdGUiOnsiY2FzZXNfc2hhMjU2IjoiOTRiYjAzYTYwN2RjYTA4ZjUwY2RjMzkxNGQ1MjlhMDhmY2U1ZDc1OWRkNDczZDQ4ZmU1OGMwMjBkNjU1M2RmMSIsImRhdGFzZXQiOiJwY2NwLWJlbmNoIHYwLjMuMi1jYW5kaWRhdGUiLCJqdWRnZV9zaGEyNTYiOiI3ZWUzNTZlYSIsIm5vdGVzIjoiXHU0ZTBkXHU4ODY4XHU3OTNhXHU1MTg1XHU1YmI5XHU2YjYzXHU3ODZlXHVmZjFiVDEgPSAwIFx1NGVmNiIsInNjb3JlIjoiNTEvNTEgKHNhbWUtYXV0aG9yIGNlaWxpbmcpIiwidGhpcmRfcGFydHlfdGVzdGVkIjowLCJ2ZXJkaWN0X2Rpc3RyaWJ1dGlvbiI6eyJnbyI6MzAsImhvbGQiOjE0LCJyZWplY3QiOjd9fSwicHJlZGljYXRlVHlwZSI6InVybjpwY2NwLWJlbmNoOnZlcmRpY3Q6djEiLCJzdWJqZWN0IjpbeyJkaWdlc3QiOnsic2hhMjU2IjoiNWEyNGIyMGI5YzQyNTgzMmE2NTBjZGZiOTY4NDQ5Y2ZjOGEwMDA0YmM0OWU2ODYzNTJiYzU5ZDk4NDBjZTRhOSJ9LCJuYW1lIjoicGNjcC1iZW5jaF92MC4zLjJfY2FuZGlkYXRlLnppcCJ9XX0=",
+  "payloadType": "application/vnd.in-toto+json",
+  "signatures": [
+   {
+    "keyid": "144df38ae0eb50eecbd07b51d5e5120bbef5f2e729062a2c477579966e462b02",
+    "sig": "MEYCIQDm74ciffdp9RQn/tae9iDD0UPrwSm1R8VF0rbNn/v6vAIhAIPwR+CIextZwr6nKUNhFvPC/7v9jhAEjzYaaEVlXMOH"
+   }
+  ]
+ }
+}
