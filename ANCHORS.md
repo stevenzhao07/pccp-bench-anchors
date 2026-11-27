@@ -2,6 +2,27 @@
 
 只记事实：锚定了什么字节、由哪条工作流、落在日志哪一条。**不做结论、不写评价。**
 
+## S-0001 · 2026-11-27（陈述锚 / A4 的 RFC 9162 一侧）
+
+用户明确批准（"发"）后写入公共 Rekor。**与 A-000x 不同**：A-000x 锚的是包字节，
+S-0001 锚的是一条 COSE 陈述的 payload 摘要 + 我们对 payload 的签名（hashedrekord 形状）。
+
+| 项 | 值 |
+|---|---|
+| 陈述 | `interop/statement_A0003_scitt.cose`（654 B；payload 390 B） |
+| payload sha256 | `bda911e8d9a794b67f62684bb64420ff6a6cd978eb8230905cd049e2280bc9d4` |
+| Rekor uuid | `108e9186e8c5677a81303f8666057bac63cda4dafa8dff89babbb250562b032b5f296823112f3486` |
+| logIndex | **4145697630**（integratedTime 1795770765） |
+| logID | `c0d23d6ad406973f9559f3ba2d1ca01f84147d8ffc5b8445c224f98b9591801d` |
+| 包含性证明 | root `8533948bb1266c3b6b98f6374f79d338c2c84811da3b69c6b3bc49414a4626c1`，depth 22 → **OK** |
+| checkpoint 签名 | **OK**（keyhash `c0d23d6a`） |
+| SET 签名 | **OK** |
+| 绑定 | 条目 digest == payload sha256 → **OK**；条目公钥对 payload 验签名 → **OK** |
+| 对面一侧 | CCF 模式 SCITT 模拟器：`entryId 1`，回执 `interop/emu_receipt.cbor`，leaf `e5b9b98d…` / root `a1097320…` |
+
+口径：两侧**不是同一字节被同时受理**——A 侧绑陈述字节，B 侧绑 payload 摘要与签名，由 payload sha256 相连。
+详见 `A4双服务_20261127.md`。
+
 ## A-0001 · 2026-11-27
 
 | 项 | 值 |
