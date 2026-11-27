@@ -45,6 +45,20 @@
         "evidence": "tools/verify_profile.py 的 C6 检查（临时副本，不动原件）",
         "verify": "python tools/verify_profile.py --entry ... --artifact <产物> --profile scitt_profile.json",
         "status": "PASS (本机，T4)"
+      },
+      {
+        "id": "C7",
+        "claim": "数据集包在空目录、隔离解释器（python -I）下自跑通过：判决 51/51、标签率 1.0",
+        "evidence": "dist/pccp-bench_v0.3.1_candidate.zip 的 dataset/selfcheck.py",
+        "verify": "解压到空目录后 python -I dataset/selfcheck.py",
+        "status": "PASS (本机，T4)"
+      },
+      {
+        "id": "C8",
+        "claim": "判器负向可控：零敏感题 0 条、全翻仍不变 0 条（没有白送分或与判器脱钩的题）",
+        "evidence": "audit/judge_negctl_v031.json（663 个布尔字段对）",
+        "verify": "python tools/judge_negative_control.py --pkg <解压后的包>",
+        "status": "PASS (本机，T4)"
       }
     ],
     "not_claimed": [

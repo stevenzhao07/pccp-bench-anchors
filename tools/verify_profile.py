@@ -56,6 +56,7 @@ def main() -> int:
     ap.add_argument("--statement", required=True)
     ap.add_argument("--statement-pubkey", required=True)
     ap.add_argument("--profile", default=os.path.join(HERE, "scitt_profile.json"))
+    ap.add_argument("--pkg-zip", help="数据集包 zip；给了就加跑 C7（空目录隔离自跑）与 C8（负向可控）")
     ap.add_argument("--integrated-time", type=int)
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args()
@@ -101,6 +102,35 @@ def main() -> int:
         os.remove(tmp)
     except OSError:
         pass
+
+    # C7 + C8：数据集包线
+    if a.pkg_zip:
+        import shutil
+        import zipfile
+        pkg = tempfile.mkdtemp(prefix="prof_pkg_")
+        with zipfile.ZipFile(a.pkg_zip) as z:
+            z.extractall(pkg)
+        # C7 空目录 + 隔离解释器（-I：不继承环境路径与用户 site）
+        p = subprocess.run([PY, "-I", os.path.join(pkg, "dataset", "selfcheck.py")],
+                           cwd=pkg, capture_output=True, text=True,
+                           encoding="utf-8", errors="replace")
+        so = (p.stdout or "") + (p.stderr or "")
+        m = re.search(r"verdict_match\s+(\d+)/(\d+)", so)
+        t = re.search(r"tag_rate\s+([0-9.]+)", so)
+        c7 = ("SELFCHECK_ALL_PASS" in so and p.returncode == 0
+              and m and int(m.group(1)) == int(m.group(2)) and t and float(t.group(1)) >= 1.0)
+        measured["C7"] = "PASS" if c7 else "FAIL"
+
+        # C8 判器负向可控：零敏感题 0 条 且 全翻不变 0 条
+        p = subprocess.run([PY, os.path.join(HERE, "judge_negative_control.py"),
+                            "--pkg", pkg, "--json", os.path.join(pkg, "negctl.json")],
+                           capture_output=True, text=True, encoding="utf-8", errors="replace")
+        so = (p.stdout or "") + (p.stderr or "")
+        nm = re.search(r"零敏感题\s+(\d+)", so)
+        nf = re.search(r"全翻仍不变\s+(\d+)", so)
+        c8 = bool(nm and nf and int(nm.group(1)) == 0 and int(nf.group(1)) == 0)
+        measured["C8"] = "PASS" if c8 else "FAIL"
+        shutil.rmtree(pkg, ignore_errors=True)
 
     rows = []
     drift = 0
