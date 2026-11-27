@@ -110,3 +110,16 @@ python tools/verify_zero_dep.py \
 本机实跑 A-0001 与 A-0002，均 `ZERO_DEP_ALL_PASS`（六项全 OK）。负向变异：产物翻一字节 → 只有 BINDING 变 FAIL；条目 body 摘要改全 0 → INCLUSION 与 SET 同时 FAIL、CHECKPOINT 仍 OK（checkpoint 签的是树头不是这一条，属正确行为）。
 
 `certs/` 下两张是 Fulcio 的中间与根证书（公开材料，取自官方 TUF 信任根），仅为免去使用者再自己去取。
+
+## 题集判别力自审（红队，2026-11-27）
+
+32 题公开集的审计结果，写在 `REDTEAM_DATASET_20261127.md`：
+
+- 9 个布尔判据标志里 **6 个从没出现过另一种取值**（零方差）→ 只有装饰作用
+- 答案分布 28 go / 4 hold / **0 reject** → "永远答 go"的傻瓜基线 = **28/32 = 0.8750**
+- 判器 31/32 = 0.9688，与基线差值 **0.0938**
+- 负例比例 4/32，Wilson 95% CI = [0.050, 0.281]
+
+**因此本仓任何分数都必须带这句**：0.9688 表示"在这 32 题上复算一致"，不表示判定能力；比较任何外部结果时，先减掉 0.875 的白送分。
+
+复现：`python tools/pccp_dataset_audit.py --zip pcb010.zip`
