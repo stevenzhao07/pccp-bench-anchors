@@ -46,6 +46,11 @@ def cbor_decode(b, i=0):
             v, j = cbor_decode(b, j)
             out[k] = v
         return out, j
+    if major == 6:
+        # 带标签（最典型是 COSE_Sign1 的 tag 18 = 0xD2）。RFC 9052 允许也鼓励带标签；
+        # 早先这里直接抛 ValueError，等于"只认无标签的编码"，与规范相反 —— 已修。
+        _tag, j = _val(b, info, i, 0)
+        return cbor_decode(b, j)
     if major == 7 and info == 20:
         return False, i
     if major == 7 and info == 21:
@@ -111,6 +116,7 @@ def _der_from_rs(r: int, s: int) -> bytes:
 
 
 def verify(cose_bytes, spki_der):
+    tagged18 = cose_bytes[:1] == b"\xd2"      # tag 18：COSE_Sign1 的标准编码
     cose, end = cbor_decode(cose_bytes, 0)
     if not isinstance(cose, list) or len(cose) != 4:
         return {"ok": False, "reason": "not a COSE_Sign1 4-element array"}
@@ -131,9 +137,9 @@ def verify(cose_bytes, spki_der):
     try:
         doc, _ = cbor_decode(payload, 0)
     except Exception as exc:            # 载荷被改坏时不崩，如实报 FAIL
-        return {"ok": False, "alg": alg, "payload_error": str(exc),
+        return {"ok": False, "alg": alg, "payload_error": str(exc), "tagged18": tagged18,
                 "kid": (unprotected or {}).get(4), "cose_len": len(cose_bytes)}
-    return {"ok": ok, "alg": alg, "payload": doc,
+    return {"ok": ok, "alg": alg, "payload": doc, "tagged18": tagged18,
             "kid": (unprotected or {}).get(4), "cose_len": len(cose_bytes)}
 
 
@@ -150,13 +156,13 @@ def main() -> int:
         # 翻签名最后一个字节：结构仍合法，只有签名该失效 → 用来证明它不是"永远 OK"
         raw = raw[:-1] + bytes([raw[-1] ^ 0x01])
 
-    from cryptography.hazmat.primitives import serialization
-    pub = serialization.load_pem_public_key(open(a.pubkey_pem, "rb").read())
-    spki = pub.public_bytes(serialization.Encoding.DER,
-                            serialization.PublicFormat.SubjectPublicKeyInfo)
+    # 原先用 cryptography 解析 PEM，与"零依赖"的说法相矛盾；改用自带 PEM→DER，真的不再需要三方包。
+    from verify_zero_dep import pem_to_der
+    spki = pem_to_der(open(a.pubkey_pem, encoding="utf-8").read())
 
     res = verify(raw, spki)
     print("SCITT_STATEMENT")
+    print("  ENCODING       %s" % ("tag 18 (COSE_Sign1)" if res.get("tagged18") else "untagged array"))
     print("  SIGNATURE      %s" % ("OK" if res["ok"] else "FAIL"))
     print("  ALG            %s" % res.get("alg"))
     print("  KID            %s" % (res.get("kid") or b"").decode(errors="replace"))

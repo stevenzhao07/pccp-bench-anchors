@@ -1,0 +1,189 @@
+{
+  "generated_at": "2026-11-27T19:08:46+08:00",
+  "env": {
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.13.18",
+    "host": "DESKTOP-IGJBTUB"
+  },
+  "verdict": "ALL_CHECKS_PASS",
+  "summary": {
+    "PASS": 15,
+    "FAIL": 0,
+    "ERROR": 0,
+    "SKIP": 2
+  },
+  "checks": [
+    {
+      "id": "HASH-A-0001",
+      "group": "bytes",
+      "claim": "A-0001 的产物字节哈希等于台账登记值",
+      "status": "PASS",
+      "detail": "sha256=1907e93a21305c30… 期望 1907e93a21305c30… size=60505",
+      "kind": "offline"
+    },
+    {
+      "id": "HASH-A-0002",
+      "group": "bytes",
+      "claim": "A-0002 的产物字节哈希等于台账登记值",
+      "status": "PASS",
+      "detail": "sha256=b19fd9d6dc473fee… 期望 b19fd9d6dc473fee… size=761",
+      "kind": "offline"
+    },
+    {
+      "id": "HASH-A-0003",
+      "group": "bytes",
+      "claim": "A-0003 的产物字节哈希等于台账登记值",
+      "status": "PASS",
+      "detail": "sha256=d684eaca7b2ba324… 期望 d684eaca7b2ba324… size=69421",
+      "kind": "offline"
+    },
+    {
+      "id": "REC-S0001",
+      "group": "anchor",
+      "claim": "S-0001 在公共日志条目里的 hash 值与 logIndex 与台账一致",
+      "status": "PASS",
+      "detail": "kind=hashedrekord alg=sha256 logIndex=4145697630 sha=bda911e8d9a794b6…",
+      "kind": "offline"
+    },
+    {
+      "id": "INC-S0001",
+      "group": "anchor",
+      "claim": "Merkle 包含路径能被离线重算并校验通过",
+      "status": "PASS",
+      "detail": "4023793372 | hTOUi7Em... |   NOT_CHECKED   = checkpoint 签名 / SET 签名（未实现，不得称为已通过）",
+      "kind": "offline"
+    },
+    {
+      "id": "SET-S0001",
+      "group": "anchor",
+      "claim": "签名条目时间戳(SET)能被离线重算并校验通过",
+      "status": "PASS",
+      "detail": "  \"integratedTime\": 1795770765, |   \"set_sha256\": \"d7e2f81e75e1b9e9\" | }",
+      "kind": "offline"
+    },
+    {
+      "id": "CP-S0001",
+      "group": "anchor",
+      "claim": "checkpoint 签名能被离线重算并校验通过",
+      "status": "PASS",
+      "detail": "  WARN           = 条目 record.logIndex 与 proof.logIndex 不一致，需记待核 |   NOT_IMPLEMENTED= SET 签名 / logID↔公钥登记校验 | ANCHOR_VERIFIED",
+      "kind": "offline"
+    },
+    {
+      "id": "ZDEP-A0003",
+      "group": "anchor",
+      "claim": "A-0003 的六项（绑定/LOGID/包含/checkpoint/SET/证书链）零三方依赖全过",
+      "status": "PASS",
+      "detail": "6 行判据；BINDING        OK | LOGID_BINDING  OK | INCLUSION      OK       idx=4021883579 depth=26 | CHECKPOINT     OK       body+LF | SET            OK       sorted-compact | CHAIN          OK       leaf<-intermediate=True; intermediate<-root=True",
+      "kind": "offline"
+    },
+    {
+      "id": "SCITT-TAG18",
+      "group": "scitt",
+      "claim": "COSE_Sign1 陈述（tag 18）验签通过，且 subject_sha256 与包字节绑定",
+      "status": "PASS",
+      "detail": "  ISSUER         urn:pccp-bench:test-key-20261127 |   SUBJECT_SHA256 d684eaca7b2ba32483c23a1474815bf0314dd2cdf8770648eb7b6e2c1826ed99 |   BINDING        OK | SCITT_ALL_PASS",
+      "kind": "offline"
+    },
+    {
+      "id": "SCITT-UNTAGGED",
+      "group": "scitt",
+      "claim": "COSE_Sign1 陈述（untagged）验签通过，且 subject_sha256 与包字节绑定",
+      "status": "PASS",
+      "detail": "  ISSUER         urn:pccp-bench:test-key-20261127 |   SUBJECT_SHA256 d684eaca7b2ba32483c23a1474815bf0314dd2cdf8770648eb7b6e2c1826ed99 |   BINDING        OK | SCITT_ALL_PASS",
+      "kind": "offline"
+    },
+    {
+      "id": "SCITT-TAMPER",
+      "group": "scitt",
+      "claim": "篡改一个字节后必须验不过（证明不是恒真）",
+      "status": "PASS",
+      "detail": "  SUBJECT_SHA256 d684eaca7b2ba32483c23a1474815bf0314dd2cdf8770648eb7b6e2c1826ed99 | SCITT_HAS_FAIL",
+      "kind": "offline"
+    },
+    {
+      "id": "PKG-V032",
+      "group": "package",
+      "claim": "v0.3.2 包在空目录自跑 51/51 判决一致，cases_sha256 与登记一致",
+      "status": "PASS",
+      "detail": "verdict_match  51/51 | tag_rate       1.0000 | SELFCHECK_ALL_PASS",
+      "kind": "offline"
+    },
+    {
+      "id": "KAPPA",
+      "group": "agreement",
+      "claim": "κ 计算器的四个解析算例（0.4 / 1.0 / 0.0 / 0.798）全部对上",
+      "status": "PASS",
+      "detail": "SELFTEST_OK   完全一致 κ=1.0 | SELFTEST_OK   系统性反向 κ=0.0 | SELFTEST_OK   负向对照（5 例扰动）κ=0.798 < 0.8 | KAPPA_SELFTEST_ALL_PASS",
+      "kind": "offline"
+    },
+    {
+      "id": "BLIND-NOANSWER",
+      "group": "t1",
+      "claim": "10 题盲标包结构上不含答案（无答案文件、判决列全空、内部标注串零出现）",
+      "status": "PASS",
+      "detail": "成员 5 个；无泄漏",
+      "kind": "offline"
+    },
+    {
+      "id": "CLAIMS",
+      "group": "claims",
+      "claim": "全部 markdown 已过禁语机审（禁语只活在否定语境）",
+      "status": "PASS",
+      "detail": "扫描 23 个 md，命中 0 处 → CLAIM_AUDIT_CLEAN",
+      "kind": "offline"
+    },
+    {
+      "id": "LINKS",
+      "group": "interop",
+      "claim": "上下游链接探活",
+      "status": "SKIP",
+      "detail": "未加 --with-network",
+      "kind": "offline"
+    },
+    {
+      "id": "SIGSTORE",
+      "group": "interop",
+      "claim": "sigstore 官方库交叉验",
+      "status": "SKIP",
+      "detail": "未加 --with-network",
+      "kind": "offline"
+    }
+  ],
+  "gaps": [
+    {
+      "item": "T1 第三方实测",
+      "count": 0,
+      "status": "0 件",
+      "note": "盲标包已就绪，缺一位与项目无关的评审人；发送需用户指定渠道"
+    },
+    {
+      "item": "κ 真实读数",
+      "count": 0,
+      "status": "仅干跑",
+      "note": "A/B 两组为同操作者干跑（T4），不代表独立一致：{}"
+    },
+    {
+      "item": "A-0004 锚定 v0.3.2",
+      "count": 0,
+      "status": "未锚",
+      "note": "等一个字；候选包已在 dist/"
+    },
+    {
+      "item": "真实 PCCP 变更回放",
+      "count": 0,
+      "status": "0 条",
+      "note": "缺'人 + 14 格 + 每格可直达引用'的真实变更档案"
+    },
+    {
+      "item": "已投递 issue 的回复",
+      "count": 0,
+      "status": "0 回复",
+      "note": "三处 201 Created（croissant #1078 / py-scrapi #10 / scrapi-wg #215）"
+    }
+  ],
+  "claim_boundary": [
+    "本输出证明的是：这些字节、这些哈希、这些签名关系能被任何人在离线环境重算一致。",
+    "本输出不证明：判据内容在监管意义上正确、第三方已见证、或本项目优于任何他人实现。"
+  ]
+}
