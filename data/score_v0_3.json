@@ -1,0 +1,18 @@
+{
+  "n_cases": 51,
+  "public": {
+    "exact_rate": 1.0,
+    "exact": 51,
+    "misses": [],
+    "tag_rate": 1.0
+  },
+  "masked": {
+    "exact_rate": 1.0,
+    "exact": 51,
+    "misses": [],
+    "tag_rate": 1.0
+  },
+  "case_digest": "245bb7eab305ff41de03d111d1d5be7ec8660c573cdfbcba88297676220c79bb",
+  "adapter": "C:\\Users\\SZYL\\AppData\\Local\\Temp\\v03x\\dataset\\adapter_reference.py",
+  "dataset_dir": "(已清理)"
+}
